@@ -1,0 +1,11 @@
+{% extends "../templates/layouts/layout.njk" %}
+{% block content %}
+  <div class="text-section">
+    <button data-modal-open="modal-1">Open modal</button>
+    {% for i in range(0, 10) -%}
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
+      </p>
+    {%- endfor %}
+  </div>
+{% endblock content %}

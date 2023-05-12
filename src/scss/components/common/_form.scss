@@ -1,0 +1,16 @@
+.form-input {
+  border: 1px solid $light-grey-color;
+  border-radius: 5px;
+  padding: 8px 20px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $light-grey-color;
+  background-color: $white-color;
+
+  &::placeholder {
+    color: $light-grey-color;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,17 @@
+.page-wrapper {
+  @include footerToBottom;
+
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.text-section {
+  p {
+    @include mb(20px);
+  }
+}
