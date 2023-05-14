@@ -1,0 +1,48 @@
+.benefits {
+  padding: 20px 0 180px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    @include grid(3);
+  }
+
+  &__item {
+    border: 1px solid $light-grey-color;
+    border-radius: 15px;
+    padding: 50px 27px 36px;
+    box-shadow: 0 30px 60px rgba(128, 64, 168, 3%);
+    text-align: center;
+    background: $white-color;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    img {
+      height: 100px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $light-grey-color;
+
+    p {
+      @include mb(15px);
+    }
+  }
+}

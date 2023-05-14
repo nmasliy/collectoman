@@ -8,7 +8,7 @@ html {
 *,
 *::before,
 *::after {
-  outline: transparent;
+  outline-color: $light-purple-color;
   box-sizing: inherit;
 }
 

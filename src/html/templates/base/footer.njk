@@ -1,3 +1,95 @@
 <footer class="footer">
-  Footer
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__col">
+          <div class="footer-logo">
+            <a href="#">
+              <img src="img/logo.svg" width="200" height="59" alt="Логотип Collectoman">
+            </a>
+            <div class="footer-logo__text">
+              <div class="footer-logo__title">Интернет-Аукцион</div>
+              <div class="footer-logo__subtitle">24 Сентября 2022 13:05:43</div>
+            </div>
+          </div>
+          <div class="footer__text">
+            <p>Наши основной приоритет — широкий ассортимент
+              и&nbsp;качество&nbsp;продаваемого товара. Мы динамично развиваемся и&nbsp;следуем за постоянно меняющимися
+              тенденциями
+              рынка. Мы&nbsp;всегда рады общению с&nbsp;нашими клиентами.</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-title">Наша компания</div>
+          <ul class="footer__list">
+            <li><a href="#">Аукцион</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Личный кабинет</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__col-title">помощь</div>
+          <ul class="footer__list">
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">Как купить</a></li>
+            <li><a href="#">Как продать</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">База знаний</a></li>
+            <li><a href="#">Пользовательское соглашение </a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-title">Контакты</div>
+          <div class="footer-contacts">
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">Адрес</div>
+              <p>101000, г. Москва,</p>
+              <p>Салинградский пр. д. 55, корпус 1, 3 этаж</p>
+            </div>
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">E-mail</div>
+              <p><a href="mailto:test@test.com">test@test.com</a></p>
+            </div>
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">График работы</div>
+              <p>Пн-Пт: 9:00-21:00</p>
+              <p>Сб: 9:00-18:00</p>
+              <p>Вс: выходной</p>
+            </div>
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">Мы в соц.сетях</div>
+              <div class="footer-contacts__socials">
+                {% include "../common/socials.njk" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <form class="footer__form footer-form" action="#">
+          <div class="footer__title">Подпишись и <em>получи 500 рублей</em> на первый выигранный лот</div>
+          <div class="footer__subtitle">В рассылке вы будете получать: </div>
+          <ul class="footer__icons">
+            <li style="background-image: url('img/footer-icon-1.svg');">Новинки в аукционе</li>
+            <li style="background-image: url('img/footer-icon-2.svg');">Спецпредложения</li>
+            <li style="background-image: url('img/footer-icon-3.svg');">Подарки и скидки</li>
+            <li style="background-image: url('img/footer-icon-4.svg');">Распродажи</li>
+          </ul>
+          <div class="footer-form__row">
+            <input class="footer-form__input form-input" type="text" placeholder="Введите ваш email">
+            <button class="footer-form__btn btn-primary">Подписаться</button>
+          </div>
+        </form>
+        <div class="footer__bottom-line">
+          <ul>
+            <li><a href="#">Согласен на обработку персональных данных</a></li>
+            <li><a href="#">Подробнее об акции</a></li>
+          </ul>
+          <p>copyright © 2022</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

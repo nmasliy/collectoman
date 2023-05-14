@@ -1,5 +1,19 @@
 .socials {
-  ul {
-    @include flex-center;
+  display: flex;
+  align-items: center;
+
+  li {
+    @include mr(20px);
+
+    transition: transform $transition;
+
+    @include hover {
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    width: 26px;
+    height: 26px;
   }
 }

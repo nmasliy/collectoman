@@ -28,6 +28,22 @@
   &__nav {
     flex-grow: 1;
 
+    li a {
+      border-radius: 5px;
+      transition: background $transition, color $transition;
+
+      @include hover {
+        color: $grey-color;
+        background-color: $light-purple-color;
+      }
+    }
+
+    .nav__home {
+      &::before {
+        display: none;
+      }
+    }
+
     ul {
       display: flex;
       flex-wrap: wrap;

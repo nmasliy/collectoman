@@ -1,7 +1,7 @@
-import Swiper, { Autoplay } from 'swiper';
+import Swiper, { Autoplay, Pagination, Navigation } from 'swiper';
 import { throttle } from '../functions/throttle';
 
-Swiper.use([Autoplay]);
+Swiper.use([Autoplay, Pagination, Navigation]);
 
 function initMobileSlider(parent, wrapper, items, breakpoint = 1024,  options, watchResize = false) {
   if (!options) {
@@ -52,3 +52,15 @@ function initMobileSlider(parent, wrapper, items, breakpoint = 1024,  options, w
 }
 
 // initMobileSlider('.hero__benefits', '.hero__cards', '.hero__card', 760);
+
+const categoriesSwiper = new Swiper('.categories-slider', {
+  spaceBetween: 50,
+  navigation: {
+    nextEl: '.categories-slider .slider-button-next',
+    prevEl: '.categories-slider .slider-button-prev',
+  },
+  pagination: {
+    el: '.categories-slider .slider-pagination',
+    clickable: true
+  },
+})

@@ -1,3 +1,3 @@
 import { initTabs } from "../functions/tabs";
 
-// initTabs('.tab-trigger', '.tab-parent');
+initTabs('.catalog__tabs li', '.catalog__list');

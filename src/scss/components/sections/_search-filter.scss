@@ -1,0 +1,162 @@
+.search-filter {
+  padding: 24px 0 5px;
+
+  &__form {
+    border-radius: 30px;
+    padding: 50px;
+    color: $white-color;
+    background-color: $light-purple-color;
+  }
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__field {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    @include search-reset;
+
+    border: 1px solid $light-grey-color;
+    border-radius: 10px;
+    padding: 20px 133px 20px 35px;
+    width: 100%;
+    font-size: 25px;
+    line-height: 1.2;
+    color: $light-grey-color;
+    background-color: $white-color;
+
+    &::placeholder {
+      color: $light-grey-color;
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__el {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  &__el-icon {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    background: url("../img/filter-icon.svg") center no-repeat;
+
+    span {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      font-weight: 500;
+      font-size: 9px;
+      background-color: $purple-color;
+    }
+  }
+
+  &__el-caption {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  &__controls {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__control {
+    @include mr(40px);
+
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 8px;
+      line-height: 1;
+    }
+  }
+
+  &__bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bottom-row-items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    margin-right: 24px;
+  }
+
+  &__btn-reset {
+    margin-right: 24px;
+    border: none;
+    border-bottom: 1px solid $white-color;
+    padding: 0;
+    font-weight: 500;
+    line-height: 1;
+    color: $white-color;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+}
+
+.filter-item {
+  border-radius: 8px;
+  padding: 20px 5px;
+  background-color: $purple-color;
+
+  &__name {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .choices-select--tab {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .search-filter {
+    &__form {
+      padding: 20px;
+    }
+  }
+}
