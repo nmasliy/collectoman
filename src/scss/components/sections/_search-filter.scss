@@ -52,8 +52,10 @@
 
   &__body {
     display: none;
-    height: 0;
-    opacity: 0;
+
+    &.is-active {
+      display: block;
+    }
   }
 
   &__el {
