@@ -1,9 +1,6 @@
 .completed {
   padding: 20px 0 180px;
 
-  &__inner {
-  }
-
   &__head {
     display: flex;
     align-items: center;
@@ -11,11 +8,12 @@
     margin-bottom: 24px;
   }
 
-  &__btn {
-  }
-
   &__list {
     @include grid(4, 20px);
+  }
+
+  &__btn-wrapper {
+    display: none;
   }
 }
 
@@ -70,5 +68,74 @@
     display: inline-block;
     margin-bottom: 16px;
     font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .completed__list {
+    gap: 14px;
+  }
+
+  .auction-card {
+    padding: 10px;
+
+    &__title {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .completed__list {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(auto, 230px));
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .completed {
+    &__list {
+      margin-bottom: 40px;
+    }
+
+    &__head {
+      display: block;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__btn-wrapper {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .completed {
+    &__list {
+      grid-template-columns: minmax(auto, 230px);
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .completed {
+    &__btn-mobile {
+      width: 100%;
+      max-width: 280px;
+    }
+
+    &__title {
+      margin: 0 auto;
+      max-width: min-content;
+    }
   }
 }

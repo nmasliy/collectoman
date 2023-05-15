@@ -15,11 +15,19 @@
   &__list {
     @include grid(2);
   }
+
+  &__btn-wrapper {
+    display: none;
+  }
 }
 
 .promo-card {
+  display: flex;
+  flex-direction: column;
+
   &__tag {
     display: inline-block;
+    align-self: flex-start;
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 10px 24px;
@@ -36,15 +44,16 @@
   &__img {
     position: relative;
     display: block;
+    overflow: hidden;
     margin-bottom: 32px;
+    border: 1px solid #a1a1a3;
+    border-radius: 15px;
 
     picture {
       @include flex-center;
     }
 
     img {
-      border: 1px solid #a1a1a3;
-      border-radius: 15px;
       width: 100%;
     }
   }
@@ -72,6 +81,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: auto;
   }
 
   &__img--completed {
@@ -90,5 +100,95 @@
     font-weight: 500;
     line-height: 1.4;
     color: $light-purple-color;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .promo-card {
+    &__img {
+      padding: 40px 0;
+    }
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) { // 991
+  .promos {
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+  }
+
+  .promo-card {
+    &__img {
+      padding: 0 40px;
+
+      &--completed::after {
+        background-size: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .promos {
+    .container {
+      padding: 0 10px;
+    }
+
+    &__list {
+      margin-bottom: 40px;
+    }
+
+    &__head {
+      display: block;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__btn-wrapper {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .promo-card {
+    &__img {
+      padding: 0 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .promos {
+    &__list {
+      gap: 40px;
+    }
+  }
+
+  .promo-card {
+    &__img {
+      padding: 40px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .promos {
+    &__btn-mobile {
+      width: 100%;
+      max-width: 280px;
+    }
+
+    &__title {
+      margin: 0 auto;
+      max-width: min-content;
+    }
   }
 }

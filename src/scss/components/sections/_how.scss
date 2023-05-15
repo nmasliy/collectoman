@@ -23,6 +23,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 32px;
+
+    img {
+      width: 100px;
+    }
   }
 
   &__name {
@@ -47,5 +51,37 @@
     p {
       @include mb(15px);
     }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .how {
+    &__name {
+      font-size: 16px;
+    }
+
+    &__list {
+      gap: 10px;
+    }
+
+    &__icon {
+      img {
+        width: 80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) { // 991
+  .how__list {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(auto, 230px));
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .how__list {
+    grid-template-columns: minmax(auto, 230px);
   }
 }

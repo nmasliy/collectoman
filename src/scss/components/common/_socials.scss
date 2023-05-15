@@ -5,6 +5,7 @@
   li {
     @include mr(20px);
 
+    flex-shrink: 0;
     transition: transform $transition;
 
     @include hover {
@@ -15,5 +16,26 @@
   img {
     width: 26px;
     height: 26px;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .socials {
+    li {
+      @include mr(16px);
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .socials {
+    li {
+      @include mr(8px);
+    }
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
   }
 }
