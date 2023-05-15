@@ -73,15 +73,23 @@
 }
 
 @media screen and (max-width: $menu-breakpoint) { // 991
-  .how__list {
-    justify-content: center;
-    grid-template-columns: repeat(2, minmax(auto, 230px));
-    gap: 20px;
+  .how {
+    padding-bottom: 90px;
+
+    &__list {
+      justify-content: center;
+      grid-template-columns: repeat(2, minmax(auto, 230px));
+      gap: 20px;
+    }
   }
 }
 
 @media screen and (max-width: 580px) {
-  .how__list {
-    grid-template-columns: minmax(auto, 230px);
+  .how {
+    padding-bottom: 60px;
+
+    &__list {
+      grid-template-columns: minmax(auto, 230px);
+    }
   }
 }

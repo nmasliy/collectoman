@@ -55,6 +55,12 @@
   }
 }
 
+@media screen and (max-width: $menu-breakpoint) {
+  .news {
+    padding-bottom: 90px;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .news {
     .container {
@@ -81,6 +87,12 @@
     &__list {
       margin-bottom: 40px;
     }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .news {
+    padding-bottom: 60px;
   }
 }
 

@@ -243,6 +243,8 @@
 
 @media screen and (max-width: $menu-breakpoint) { // 991
   .catalog {
+    padding-bottom: 90px;
+
     &__list {
       justify-content: center;
       grid-template-columns: repeat(2, minmax(280px, 300px));
@@ -273,6 +275,8 @@
 
 @media screen and (max-width: 580px) {
   .catalog {
+    padding-bottom: 60px;
+
     &__tabs {
       li {
         @include mr(24px);

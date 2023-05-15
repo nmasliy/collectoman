@@ -113,6 +113,8 @@
 
 @media screen and (max-width: $menu-breakpoint) { // 991
   .promos {
+    padding-bottom: 90px;
+
     &__list {
       grid-template-columns: 1fr;
       gap: 45px;
@@ -167,6 +169,8 @@
 
 @media screen and (max-width: 580px) {
   .promos {
+    padding-bottom: 60px;
+
     &__list {
       gap: 40px;
     }
