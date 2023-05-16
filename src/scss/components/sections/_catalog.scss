@@ -1,9 +1,6 @@
 .catalog {
   padding: 10px 0 180px;
 
-  &__inner {
-  }
-
   &__tabs {
     margin-bottom: 20px;
 
@@ -55,15 +52,20 @@
     @include grid(4, 20px);
 
     counter-reset: catalog-list;
-    display: none;
-
-    &.is-active {
-      display: grid;
-    }
   }
 
   &__btn-wrapper {
     text-align: center;
+  }
+
+  &--tabs {
+    .catalog__list {
+      display: none;
+
+      &.is-active {
+        display: grid;
+      }
+    }
   }
 }
 

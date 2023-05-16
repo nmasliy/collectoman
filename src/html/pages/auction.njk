@@ -1,0 +1,22 @@
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block content %}
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Аукцион</a></li>
+    </ul>
+  </div>
+</div>
+<div class="auction-head">
+  <div class="container">
+    <div class="auction-head__inner">
+      <h1 class="auction-head__title page-title">Аукцион №38 - виниловые пластинки XX-XXI веков</h1>
+      <div class="auction-head__date">12/03/2023 - 20/03/2023</div>
+    </div>
+  </div>
+</div>
+{% include "../templates/sections/search-filter.njk" %}
+{% include "../templates/sections/catalog.njk" %}
+{% endblock content %}

@@ -1,0 +1,47 @@
+.breadcrumbs {
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: $light-grey-color;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    flex-shrink: 0;
+    margin-right: 10px;
+
+    a {
+      position: relative;
+      padding-right: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        background-color: $purple-color;
+        transform: translateY(-50%);
+      }
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child {
+      a {
+        padding-right: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
