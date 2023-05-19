@@ -1,0 +1,19 @@
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block content %}
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Аукцион</a></li>
+      <li><a href="#">Карточка товара</a></li>
+    </ul>
+  </div>
+</div>
+
+{% include "../templates/sections/product.njk" %}
+
+{# {% include "../templates/sections/catalog-slider.njk" %}
+{% include "../templates/sections/catalog-slider-2.njk" %} #}
+
+{% endblock content %}

@@ -1,7 +1,7 @@
-import Swiper, { Autoplay, Pagination, Navigation } from 'swiper';
+import Swiper, { Autoplay, Pagination, Navigation, Thumbs } from 'swiper';
 import { throttle } from '../functions/throttle';
 
-Swiper.use([Autoplay, Pagination, Navigation]);
+Swiper.use([Autoplay, Pagination, Navigation, Thumbs]);
 
 function initMobileSlider(parent, wrapper, items, breakpoint = 1024,  options, watchResize = false) {
   if (!options) {
@@ -64,3 +64,24 @@ const categoriesSwiper = new Swiper('.categories-slider', {
     clickable: true
   },
 })
+
+const productThumbs  = new Swiper('.product__thumbs', {
+  spaceBetween: 20,
+  slidesPerView: 3
+})
+
+const productSwiper = new Swiper('.product__slider', {
+  spaceBetween: 50,
+  navigation: {
+    nextEl: '.product__slider .slider-button-next',
+    prevEl: '.product__slider .slider-button-prev',
+  },
+  pagination: {
+    el: '.product__slider .slider-pagination',
+    clickable: true
+  },
+  thumbs:{
+    swiper: productThumbs
+  }
+})
+

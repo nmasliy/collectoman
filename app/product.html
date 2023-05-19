@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+
+<body>
+  <div class="page-wrapper">
+    
+    <header class="header">
+  <div class="header__wrapper">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top__inner">
+          <div class="header-logo">
+            <a href="#">
+              <img src="img/logo.svg" width="200" height="59" alt="Логотип Collectoman">
+            </a>
+            <div class="header-logo__text">
+              <div class="header-logo__title">Интернет-Аукцион</div>
+              <div class="header-logo__subtitle">24 Сентября 2022 13:05:43</div>
+            </div>
+          </div>
+          <div class="header-top__info">
+            <ul>
+              <li>Пн-Вс 09:00-21:00</li>
+              <li>Телефон: <a href="tel:+74996382946">+7 499 638 29 46</a></li>
+            </ul>
+          </div>
+          <button class="header-top__btn btn-secondary btn-secondary--white btn-secondary--call"
+            data-modal-open="modal-call">Обратный
+            звонок</button>
+          <ul class="header-top__icons">
+            <li class="header-top__icon icon-cart"><a href="#"></a></li>
+            <li class="header-top__icon icon-wishlist"><a href="#"></a></li>
+            <li class="header-top__icon icon-profile"><a href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-middle">
+      <div class="container">
+        <div class="header-middle__inner">
+          <nav class="header__nav nav">
+            <ul>
+  <li class="nav__home"><a href="#">Главная</a></li>
+  <li><a href="#">Аукцион</a></li>
+  <li><a href="#">Новости</a></li>
+  <li><a href="#">Акции</a></li>
+  <li><a href="#">Купить</a></li>
+  <li><a href="#">Продать</a></li>
+  <li><a href="#">Оплата и Доставка</a></li>
+  <li><a href="#">Контакты</a></li>
+  <li><a href="#">Отзывы</a></li>
+</ul>
+
+          </nav>
+          <form class="header-middle__form" action="#">
+            <button class="header__search-btn"></button>
+            <input type="search" class="header__search-input form-input" placeholder="Поиск">
+          </form>
+          <button class="burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container">
+        <div class="header-bottom__inner">
+          <form class="header-bottom__form" action="#">
+            <button class="header__search-btn"></button>
+            <input type="search" class="header__search-input form-input" placeholder="Поиск">
+          </form>
+          <div class="header-bottom__buttons">
+            <a class="header-bottom__btn btn-secondary" href="#">Регистрация</a>
+            <a class="header-bottom__btn btn-primary" href="#">Вход</a>
+            <a class="header-bottom__btn btn-tertiary" href="#">Подписка</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="burger-menu">
+    <div class="burger-menu__head">
+
+      <ul class="burger-menu__info">
+        <li>Пн-Вс 09:00-21:00</li>
+        <li>Телефон: <a href="tel:+74996382946">+7 499 638 29 46</a></li>
+      </ul>
+      <button class="burger-menu__btn btn-secondary btn-secondary--call" data-modal-open="modal-call">Обратный
+        звонок</button>
+    </div>
+    <nav class="burger-menu__nav nav">
+      <ul>
+  <li class="nav__home"><a href="#">Главная</a></li>
+  <li><a href="#">Аукцион</a></li>
+  <li><a href="#">Новости</a></li>
+  <li><a href="#">Акции</a></li>
+  <li><a href="#">Купить</a></li>
+  <li><a href="#">Продать</a></li>
+  <li><a href="#">Оплата и Доставка</a></li>
+  <li><a href="#">Контакты</a></li>
+  <li><a href="#">Отзывы</a></li>
+</ul>
+
+    </nav>
+  </div>
+
+  <div class="menu-overlay"></div>
+</header>
+
+    
+    <main class="main">
+      
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Аукцион</a></li>
+      <li><a href="#">Карточка товара</a></li>
+    </ul>
+  </div>
+</div>
+
+<section class="product">
+  <div class="container">
+    <div class="product__inner">
+      <div class="product__slider-wrapper">
+        <div class="product__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="product__slide swiper-slide">
+              <picture>
+                <source srcset="img/product.webp 1x, img/product@2x.webp 2x" type="image/webp">
+                <img loading="lazy" src="img/product.jpg" srcset="img/product.jpg 1x, img/product@2x.jpg 2x" width="400"
+                  height="394" alt="">
+              </picture>
+            </div>
+            <div class="product__slide swiper-slide">
+              <picture>
+                <source srcset="img/product.webp 1x, img/product@2x.webp 2x" type="image/webp">
+                <img loading="lazy" src="img/product.jpg" srcset="img/product.jpg 1x, img/product@2x.jpg 2x" width="400"
+                  height="394" alt="">
+              </picture>
+            </div>
+            <div class="product__slide swiper-slide">
+              <picture>
+                <source srcset="img/product.webp 1x, img/product@2x.webp 2x" type="image/webp">
+                <img loading="lazy" src="img/product.jpg" srcset="img/product.jpg 1x, img/product@2x.jpg 2x" width="400"
+                  height="394" alt="">
+              </picture>
+            </div>
+            <div class="product__slide swiper-slide">
+              <picture>
+                <source srcset="img/product.webp 1x, img/product@2x.webp 2x" type="image/webp">
+                <img loading="lazy" src="img/product.jpg" srcset="img/product.jpg 1x, img/product@2x.jpg 2x" width="400"
+                  height="394" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="product__thumbs swiper">
+          <div class="swiper-wrapper">
+            <div class="product__thumbs-slide swiper-slide">
+              <picture>
+                <source srcset="img/product-thumb-1.webp 1x, img/product-thumb-1@2x.webp 2x" type="image/webp">
+                <img loading="lazy" src="img/product-thumb-1.jpg"
+                  srcset="img/product-thumb-1.jpg 1x, img/product-thumb-1@2x.jpg 2x" width="120" height="120"
+                  alt="thumb">
+              </picture>
+            </div>
+            <div class="product__thumbs-slide swiper-slide">
+              <picture>
+                <source srcset="img/product-thumb-2.webp 1x, img/product-thumb-2@2x.webp 2x" type="image/webp">
+                <img loading="lazy" src="img/product-thumb-2.jpg"
+                  srcset="img/product-thumb-2.jpg 1x, img/product-thumb-2@2x.jpg 2x" width="120" height="120"
+                  alt="thumb">
+              </picture>
+            </div>
+            <div class="product__thumbs-slide swiper-slide">
+              <picture>
+                <source srcset="img/product-thumb-3.webp 1x, img/product-thumb-3@2x.webp 2x" type="image/webp">
+                <img loading="lazy" src="img/product-thumb-3.jpg"
+                  srcset="img/product-thumb-3.jpg 1x, img/product-thumb-3@2x.jpg 2x" width="120" height="120"
+                  alt="thumb">
+              </picture>
+            </div>
+            <div class="product__thumbs-slide swiper-slide">
+              <picture>
+                <source srcset="img/product-thumb-1.webp 1x, img/product-thumb-1@2x.webp 2x" type="image/webp">
+                <img loading="lazy" src="img/product-thumb-1.jpg"
+                  srcset="img/product-thumb-1.jpg 1x, img/product-thumb-1@2x.jpg 2x" width="120" height="120"
+                  alt="thumb">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product__content">
+        <h1 class="product__title">MAX RICHTER — The New Four Seasons Vivaldi Recomposed (LP)</h1>
+        <div class="product__timer product-timer" data-deadline="2023-06-26">
+          <div class="product-timer__item">
+            <div class="product-timer__num product-timer__days"></div>
+          </div>
+          <div class="product-timer__item">
+            <div class="product-timer__num product-timer__hours"></div>
+          </div>
+          <div class="product-timer__item">
+            <div class="product-timer__num product-timer__minutes"></div>
+          </div>
+          <div class="product-timer__item">
+            <div class="product-timer__num product-timer__seconds"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    </main>
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__col footer__col--logo">
+          <div class="footer-logo">
+            <a href="#">
+              <img src="img/logo.svg" width="200" height="59" alt="Логотип Collectoman">
+            </a>
+            <div class="footer-logo__text">
+              <div class="footer-logo__title">Интернет-Аукцион</div>
+              <div class="footer-logo__subtitle">24 Сентября 2022 13:05:43</div>
+            </div>
+          </div>
+          <div class="footer__text">
+            <p>Наши основной приоритет — широкий ассортимент
+              и&nbsp;качество&nbsp;продаваемого товара. Мы динамично развиваемся и&nbsp;следуем за постоянно меняющимися
+              тенденциями
+              рынка. Мы&nbsp;всегда рады общению с&nbsp;нашими клиентами.</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-title">Наша компания</div>
+          <ul class="footer__list footer__list--2-columns-mobile">
+            <li><a href="#">Аукцион</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Личный кабинет</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__col-title">помощь</div>
+          <ul class="footer__list">
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">Как купить</a></li>
+            <li><a href="#">Как продать</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">База знаний</a></li>
+            <li class="footer-item-centered-mobile"><a href="#">Пользовательское соглашение </a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-title">Контакты</div>
+          <div class="footer-contacts">
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">Адрес</div>
+              <p>101000, г. Москва,</p>
+              <p>Салинградский пр. д. 55, корпус 1, 3 этаж</p>
+            </div>
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">E-mail</div>
+              <p><a href="mailto:test@test.com">test@test.com</a></p>
+            </div>
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">График работы</div>
+              <p>Пн-Пт: 9:00-21:00</p>
+              <p>Сб: 9:00-18:00</p>
+              <p>Вс: выходной</p>
+            </div>
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">Мы в соц.сетях</div>
+              <div class="footer-contacts__socials">
+                <ul class="socials">
+  <li><a href="#"><img src="img/twitter-icon.svg" width="26" height="26" alt="иконка twitter"></a></li>
+  <li><a href="#"><img src="img/vk-icon.svg" width="26" height="26" alt="иконка вконтакте"></a></li>
+  <li><a href="#"><img src="img/fb-icon.svg" width="26" height="26" alt="иконка facebook"></a></li>
+  <li><a href="#"><img src="img/ok-icon.svg" width="26" height="26" alt="икона одноклассники"></a></li>
+  <li><a href="#"><img src="img/insta-icon.svg" width="26" height="26" alt="иконка instagram"></a></li>
+</ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <form class="footer__form footer-form" action="#">
+          <div class="footer__title">Подпишись и <em>получи 500 рублей</em> на&nbsp;первый выигранный лот</div>
+          <div class="footer__subtitle">В рассылке вы будете получать: </div>
+          <ul class="footer__icons">
+            <li style="background-image: url('img/footer-icon-1.svg');">Новинки в аукционе</li>
+            <li style="background-image: url('img/footer-icon-2.svg');">Спецпредложения</li>
+            <li style="background-image: url('img/footer-icon-3.svg');">Подарки и скидки</li>
+            <li style="background-image: url('img/footer-icon-4.svg');">Распродажи</li>
+          </ul>
+          <div class="footer-form__row">
+            <input class="footer-form__input form-input" type="text" placeholder="Введите ваш email">
+            <button class="footer-form__btn btn-primary">Подписаться</button>
+          </div>
+        </form>
+        <div class="footer__bottom-line">
+          <ul>
+            <li><a href="#">Согласен на обработку персональных данных</a></li>
+            <li><a href="#">Подробнее об акции</a></li>
+          </ul>
+          <p>copyright © 2022</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+  </div>
+  
+  <div class="modal modal-call" id="modal-call" aria-hidden="true">
+  <div class="modal__wrapper">
+    <div class="modal__inner">
+      <div class="modal__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti, officia omnis vitae quae quidem nostrum
+        aliquid voluptas consectetur laudantium, qui excepturi recusandae dolorem doloribus aperiam ratione eius numquam
+        debitis.
+      </div>
+      <button class="modal__close" data-modal-close>
+        <img src="img/close-icon.svg" width="30" height="30" alt="Close icon">
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/main.js"></script>
+
+  
+</body>
+
+</html>

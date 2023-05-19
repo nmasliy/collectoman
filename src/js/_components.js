@@ -5,3 +5,5 @@ import './components/modals';
 import './components/selects';
 import './components/sliders';
 import './components/search-filter';
+import './components/timer';
+import './components/fslightbox';

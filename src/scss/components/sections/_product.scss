@@ -1,0 +1,21 @@
+.product-timer {
+  &__item {
+    color: $white-color;
+    background-color: $light-purple-color;
+  }
+
+  &__num {
+    position: relative;
+    min-width: 62px;
+
+    &::before {
+      content: attr(data-title);
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      display: block;
+      font-size: 14px;
+      transform: translateX(-50%);
+    }
+  }
+}
