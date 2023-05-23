@@ -1,18 +1,38 @@
 .swiper {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
   .slider-button-prev,
   .slider-button-next {
     display: block;
-    border: none;
+    border: 1px solid $white-color;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     background: url("../img/arrow-icon.svg") center no-repeat;
-    background-color: $purple-color;
-    transition: opacity $transition;
+    background-color: transparent;
+    transition: $transition;
     cursor: pointer;
 
     &.swiper-button-disabled {
       opacity: 0.7;
+    }
+
+    @include hover {
+      border-color: $purple-color;
+      background-color: $purple-color;
+    }
+
+    /* stylelint-disable-next-line order/order */
+    &--purple {
+      background-color: $purple-color;
+
+      @include hover {
+        background-color: $second-purple-color;
+      }
     }
   }
 

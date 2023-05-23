@@ -11,16 +11,16 @@
 
   li {
     flex-shrink: 0;
-    margin-right: 10px;
+    margin-left: 10px;
 
     a {
       position: relative;
-      padding-right: 15px;
+      padding-left: 15px;
 
       &::before {
         content: "";
         position: absolute;
-        right: 0;
+        left: 0;
         top: 50%;
         border-radius: 50%;
         width: 5px;
@@ -34,14 +34,20 @@
       }
     }
 
-    &:last-child {
+    &:first-child {
       a {
-        padding-right: 0;
+        padding-left: 0;
 
         &::before {
           display: none;
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .breadcrumbs {
+    font-size: 12px;
   }
 }

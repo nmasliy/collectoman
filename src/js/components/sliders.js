@@ -85,3 +85,27 @@ const productSwiper = new Swiper('.product__slider', {
   }
 })
 
+const catalogSwiper = new Swiper('.catalog-slider__swiper', {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.catalog-slider .slider-button-next',
+    prevEl: '.catalog-slider .slider-button-prev',
+  },
+  pagination: {
+    el: '.catalog-slider .slider-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+    },
+    991: {
+      slidesPerView: 3,
+    },
+    1280: {
+      slidesPerView: 4,
+    }
+  }
+})
+
