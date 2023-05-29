@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+
+<body>
+  <div class="page-wrapper">
+    
+    <header class="header">
+  <div class="header__wrapper">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top__inner">
+          <div class="header-logo">
+            <a href="./">
+              <img src="img/logo.svg" width="200" height="59" alt="Логотип Collectoman">
+            </a>
+            <div class="header-logo__text">
+              <div class="header-logo__title">Интернет-Аукцион</div>
+              <div class="header-logo__subtitle">24 Сентября 2022 13:05:43</div>
+            </div>
+          </div>
+          <div class="header-top__info">
+            <ul>
+              <li>Пн-Вс 09:00-21:00</li>
+              <li>Телефон: <a href="tel:+74996382946">+7 499 638 29 46</a></li>
+            </ul>
+          </div>
+          <button class="header-top__btn btn-secondary btn-secondary--white btn-secondary--call"
+            data-modal-open="modal-call">Обратный
+            звонок</button>
+          <ul class="header-top__icons">
+            <li class="header-top__icon icon-cart"><a href="#"></a></li>
+            <li class="header-top__icon icon-wishlist"><a href="#"></a></li>
+            <li class="header-top__icon icon-profile"><a href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-middle">
+      <div class="container">
+        <div class="header-middle__inner">
+          <nav class="header__nav nav">
+            <ul>
+  <li class="nav__home"><a href="#">Главная</a></li>
+  <li><a href="#">Аукцион</a></li>
+  <li><a href="#">Новости</a></li>
+  <li><a href="#">Акции</a></li>
+  <li><a href="#">Купить</a></li>
+  <li><a href="#">Продать</a></li>
+  <li><a href="#">Оплата и Доставка</a></li>
+  <li><a href="#">Контакты</a></li>
+  <li><a href="#">Отзывы</a></li>
+</ul>
+
+          </nav>
+          <form class="header-middle__form" action="#">
+            <button class="header__search-btn"></button>
+            <input type="search" class="header__search-input form-input" placeholder="Поиск">
+          </form>
+          <button class="burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container">
+        <div class="header-bottom__inner">
+          <form class="header-bottom__form" action="#">
+            <button class="header__search-btn"></button>
+            <input type="search" class="header__search-input form-input" placeholder="Поиск">
+          </form>
+          <div class="header-bottom__buttons">
+            <a class="header-bottom__btn btn-secondary" href="#">Регистрация</a>
+            <a class="header-bottom__btn btn-green" href="#">Вход</a>
+            <a class="header-bottom__btn btn-tertiary" href="#">Подписка</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="burger-menu">
+    <div class="burger-menu__head">
+
+      <ul class="burger-menu__info">
+        <li>Пн-Вс 09:00-21:00</li>
+        <li>Телефон: <a href="tel:+74996382946">+7 499 638 29 46</a></li>
+      </ul>
+      <button class="burger-menu__btn btn-secondary btn-secondary--call" data-modal-open="modal-call">Обратный
+        звонок</button>
+    </div>
+    <nav class="burger-menu__nav nav">
+      <ul>
+  <li class="nav__home"><a href="#">Главная</a></li>
+  <li><a href="#">Аукцион</a></li>
+  <li><a href="#">Новости</a></li>
+  <li><a href="#">Акции</a></li>
+  <li><a href="#">Купить</a></li>
+  <li><a href="#">Продать</a></li>
+  <li><a href="#">Оплата и Доставка</a></li>
+  <li><a href="#">Контакты</a></li>
+  <li><a href="#">Отзывы</a></li>
+</ul>
+
+    </nav>
+  </div>
+
+  <div class="menu-overlay"></div>
+</header>
+
+    
+    <main class="main">
+      
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Аукцион</a></li>
+      <li><a href="#">Оплата и доставка</a></li>
+    </ul>
+  </div>
+</div>
+<section class="terms">
+  <div class="container">
+    <div class="terms__inner">
+      <h1 class="terms__title page-title">Оплата и доставка</h1>
+      <div class="terms-tabs">
+        <ul>
+          <li class="is-active" role="button" tabindex="0" data-tabs="1">Как работает аукцион</li>
+          <li role="button" tabindex="0" data-tabs="2">Способы оплаты</li>
+          <li role="button" tabindex="0" data-tabs="3">Способы доставки</li>
+        </ul>
+      </div>
+      <div class="terms-content">
+        <div class="terms-content__item is-active" data-tabs="1">
+          <h3 class="terms-content__title terms-content__title--center">Как работает аукцион</h3>
+          <ol class="how-list">
+            <li class="how-list__item">
+              <div class="how-list__icon">
+                <img src="img/how-icon-1.svg" width="100" height="100" alt="how works icon">
+              </div>
+              <div class="how-list__name">Регистрируйся</div>
+              <div class="how-list__text">
+                <p>Для того чтобы принять участие
+                  в&nbsp;аукционе Вам необходимо зарегистрироваться</p>
+              </div>
+            </li>
+            <li class="how-list__item">
+              <div class="how-list__icon">
+                <img src="img/how-icon-2.svg" width="100" height="100" alt="how works icon">
+              </div>
+              <div class="how-list__name">Делай ставку</div>
+              <div class="how-list__text">
+                <p>Вы можете сделать ставку
+                  на&nbsp;минимальный шаг или поставить автоматическую ставку (Автобид)</p>
+              </div>
+            </li>
+            <li class="how-list__item">
+              <div class="how-list__icon">
+                <img src="img/how-icon-3.svg" width="100" height="100" alt="how works icon">
+              </div>
+              <div class="how-list__name">Выигрывай</div>
+              <div class="how-list__text">
+                <p>После завершения аукицона,
+                  вы&nbsp;будете признаны победителем, если ваша ставка последняя</p>
+              </div>
+            </li>
+            <li class="how-list__item">
+              <div class="how-list__icon">
+                <img src="img/how-icon-4.svg" width="100" height="100" alt="how works icon">
+              </div>
+              <div class="how-list__name">Забирай</div>
+              <div class="how-list__text">
+                <p>После выигрыша надо оформить заказ и указать каким образом
+                  Вы&nbsp;хотите получить и оплатить лот</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="terms-content__item" data-tabs="2">
+          <h3 class="terms-content__title">Способы оплаты</h3>
+          <div class="terms-content__text">
+            <p>Комиссионное вознаграждение Организатора аукциона составляет 10% от достигнутой в ходе торгов цены и
+              добавляется к стоимости лота</p>
+            <p>Для оплаты лотов отводится 14 календарных дней. В случае неуплаты лот переходит другому участнику</p>
+            <p>Можно не дожидаясь окончания аукциона купить лот по блиц цене</p>
+          </div>
+          <div class="payment">
+            <div class="payment__title">Оплата производится одним из указанных способов</div>
+            <ul class="payment__list accordion">
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Наличными в офисе</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Наличными курьеру при получении</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Банковской картой на сайте</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Банковской картой курьеру при получении</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Банковским переводом</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">СБП</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Другие способы оплаты</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+            </ul>
+            <div class="payment__caption">Мы принимаем платежи с сайта по следующим банковским картам</div>
+            <ul class="payment__partners">
+              <li>
+                <picture>
+                  <source srcset="img/payment-1.webp 1x, img/payment-1@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="img/payment-1.png" srcset="img/payment-1.png 1x, img/payment-1@2x.png 2x"
+                    width="100" height="33" alt="способ оплаты Visa">
+                </picture>
+              </li>
+              <li>
+                <picture>
+                  <source srcset="img/payment-2.webp 1x, img/payment-2@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="img/payment-2.png" srcset="img/payment-2.png 1x, img/payment-2@2x.png 2x"
+                    width="100" height="78" alt="способ оплаты Mastercard">
+                </picture>
+              </li>
+              <li>
+                <picture>
+                  <source srcset="img/payment-3.webp 1x, img/payment-3@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="img/payment-3.png" srcset="img/payment-3.png 1x, img/payment-3@2x.png 2x"
+                    width="100" height="33" alt="способ оплаты Мир">
+                </picture>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="terms-content__item" data-tabs="3">
+          <h3 class="terms-content__title">Способы доставки</h3>
+          <div class="terms-content__text">
+            <p>Доставка выигранных лотов осуществляется следующими способами</p>
+          </div>
+          <div class="delivery">
+            <ul class="delivery__list accordion">
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Самовывоз</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Курьером по Москве и МО</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">СДЭК</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Пикпоинт</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">Почта РФ</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__head" role="button" tabindex="0">EMS</div>
+                <div class="accordion__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo saepe, cupiditate
+                    similique
+                    omnis officia quisquam maxime voluptate, officiis, quae enim? Adipisci eligendi consectetur, sed
+                    error
+                    ad nesciunt vero consequatur?</p>
+                </div>
+              </li>
+            </ul>
+            <div class="delivery__caption">Доставка осуществляется только в пределах Российской Федерации</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__col footer__col--logo">
+          <div class="footer-logo">
+            <a href="#">
+              <img src="img/logo.svg" width="200" height="59" alt="Логотип Collectoman">
+            </a>
+            <div class="footer-logo__text">
+              <div class="footer-logo__title">Интернет-Аукцион</div>
+              <div class="footer-logo__subtitle">24 Сентября 2022 13:05:43</div>
+            </div>
+          </div>
+          <div class="footer__text">
+            <p>Наши основной приоритет — широкий ассортимент
+              и&nbsp;качество&nbsp;продаваемого товара. Мы динамично развиваемся и&nbsp;следуем за постоянно меняющимися
+              тенденциями
+              рынка. Мы&nbsp;всегда рады общению с&nbsp;нашими клиентами.</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-title">Наша компания</div>
+          <ul class="footer__list footer__list--2-columns-mobile">
+            <li><a href="#">Аукцион</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Личный кабинет</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__col-title">помощь</div>
+          <ul class="footer__list">
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">Как купить</a></li>
+            <li><a href="#">Как продать</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">База знаний</a></li>
+            <li class="footer-item-centered-mobile"><a href="#">Пользовательское соглашение </a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-title">Контакты</div>
+          <div class="footer-contacts">
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">Адрес</div>
+              <p>101000, г. Москва,</p>
+              <p>Салинградский пр. д. 55, корпус 1, 3 этаж</p>
+            </div>
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">E-mail</div>
+              <p><a href="mailto:test@test.com">test@test.com</a></p>
+            </div>
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">График работы</div>
+              <p>Пн-Пт: 9:00-21:00</p>
+              <p>Сб: 9:00-18:00</p>
+              <p>Вс: выходной</p>
+            </div>
+            <div class="footer-contacts__item">
+              <div class="footer-contacts__title">Мы в соц.сетях</div>
+              <div class="footer-contacts__socials">
+                <ul class="socials">
+  <li><a href="#"><img src="img/twitter-icon.svg" width="26" height="26" alt="иконка twitter"></a></li>
+  <li><a href="#"><img src="img/vk-icon.svg" width="26" height="26" alt="иконка вконтакте"></a></li>
+  <li><a href="#"><img src="img/fb-icon.svg" width="26" height="26" alt="иконка facebook"></a></li>
+  <li><a href="#"><img src="img/ok-icon.svg" width="26" height="26" alt="икона одноклассники"></a></li>
+  <li><a href="#"><img src="img/insta-icon.svg" width="26" height="26" alt="иконка instagram"></a></li>
+</ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <form class="footer__form footer-form" action="#">
+          <div class="footer__title">Подпишись и <em>получи 500 рублей</em> на&nbsp;первый выигранный лот</div>
+          <div class="footer__subtitle">В рассылке вы будете получать: </div>
+          <ul class="footer__icons">
+            <li style="background-image: url('img/footer-icon-1.svg');">Новинки в аукционе</li>
+            <li style="background-image: url('img/footer-icon-2.svg');">Спецпредложения</li>
+            <li style="background-image: url('img/footer-icon-3.svg');">Подарки и скидки</li>
+            <li style="background-image: url('img/footer-icon-4.svg');">Распродажи</li>
+          </ul>
+          <div class="footer-form__row">
+            <input class="footer-form__input form-input" type="text" placeholder="Введите ваш email">
+            <button class="footer-form__btn btn-primary">Подписаться</button>
+          </div>
+        </form>
+        <div class="footer__bottom-line">
+          <ul>
+            <li><a href="#">Согласен на обработку персональных данных</a></li>
+            <li><a href="#">Подробнее об акции</a></li>
+          </ul>
+          <p>copyright © 2022</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+  </div>
+  
+  <div class="modal modal-call" id="modal-call" aria-hidden="true">
+  <div class="modal__wrapper">
+    <div class="modal__inner">
+      <div class="modal__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti, officia omnis vitae quae quidem nostrum
+        aliquid voluptas consectetur laudantium, qui excepturi recusandae dolorem doloribus aperiam ratione eius numquam
+        debitis.
+      </div>
+      <button class="modal__close" data-modal-close>
+        <img src="img/close-icon.svg" width="30" height="30" alt="Close icon">
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/main.js"></script>
+
+  
+</body>
+
+</html>

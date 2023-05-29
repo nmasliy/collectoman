@@ -4,20 +4,12 @@
   &__title {
     margin-bottom: 24px;
   }
+}
 
-  &__list {
-    @include grid(4, 20px);
+.how-list {
+  @include grid(4, 20px);
 
-    counter-reset: how-list;
-  }
-
-  &__item {
-    counter-increment: how-list;
-    border: 1px solid $light-grey-color;
-    border-radius: 10px;
-    padding: 33px 19px;
-    background: $white-color;
-  }
+  counter-reset: how-list;
 
   &__icon {
     display: flex;
@@ -52,16 +44,22 @@
       @include mb(15px);
     }
   }
+
+  &__item {
+    counter-increment: how-list;
+    border: 1px solid $light-grey-color;
+    border-radius: 10px;
+    padding: 33px 19px;
+    background: $white-color;
+  }
 }
 
 @media screen and (max-width: 1280px) {
-  .how {
+  .how-list {
+    gap: 10px;
+
     &__name {
       font-size: 16px;
-    }
-
-    &__list {
-      gap: 10px;
     }
 
     &__icon {
@@ -73,23 +71,23 @@
 }
 
 @media screen and (max-width: $menu-breakpoint) { // 991
+  .how-list {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(auto, 230px));
+    gap: 20px;
+  }
+
   .how {
     padding-bottom: 90px;
-
-    &__list {
-      justify-content: center;
-      grid-template-columns: repeat(2, minmax(auto, 230px));
-      gap: 20px;
-    }
   }
 }
 
 @media screen and (max-width: 580px) {
+  .how-list {
+    grid-template-columns: minmax(auto, 230px);
+  }
+
   .how {
     padding-bottom: 60px;
-
-    &__list {
-      grid-template-columns: minmax(auto, 230px);
-    }
   }
 }
