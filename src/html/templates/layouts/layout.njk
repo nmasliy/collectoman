@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-{% block head %}
-{% include "../base/head.njk" %}
-{% endblock %}
+
+<head>
+  {% include "../base/head.njk" %}
+  {% block head %}{% endblock %}
+</head>
+
 
 <body>
   <div class="page-wrapper">

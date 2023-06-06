@@ -1,0 +1,15 @@
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block content %}
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Корзина</a></li>
+      <li><a href="#">Оформление</a></li>
+      <li><a href="#">Страница оплаты</a></li>
+    </ul>
+  </div>
+</div>
+{% include "../templates/sections/order-complete.njk" %}
+{% endblock content %}

@@ -7,3 +7,4 @@ import './components/sliders';
 import './components/search-filter';
 import './components/timer';
 import './components/fslightbox';
+import './components/map';

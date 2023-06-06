@@ -5,7 +5,7 @@
     border-radius: 30px;
     padding: 50px;
     color: $white-color;
-    background-color: $second-purple-color;
+    background-color: $light-purple-color;
   }
 
   &__header {
@@ -328,7 +328,7 @@
       height: 50px;
       font-size: 0;
       background: url("../img/search-white-icon.svg") center / 20px no-repeat;
-      background-color: $green-color;
+      background-color: $second-purple-color;
     }
 
     &__list {

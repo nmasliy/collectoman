@@ -1,0 +1,19 @@
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block head %}
+<script src="https://api-maps.yandex.ru/2.1/?apikey=77094a60-f3bb-48a9-9cf0-a20797dba222&lang=ru_RU"
+  type="text/javascript"></script>
+{% endblock head %}
+
+{% block content %}
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Корзина</a></li>
+      <li><a href="#">Оформление</a></li>
+    </ul>
+  </div>
+</div>
+{% include "../templates/sections/order.njk" %}
+{% endblock content %}

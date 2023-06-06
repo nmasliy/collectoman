@@ -124,68 +124,48 @@
     
     <main class="main">
       
-<style>
-  .test-list {
-    margin: 30px 0;
-  }
-
-  .test-list a {
-    padding: 10px;
-    font-size: 20px;
-  }
-</style>
-<div class="text-section">
-  <ul class="test-list">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="auction.html">Аукцион</a></li>
-    <li><a href="product.html">Карточка товара </a></li>
-    <li><a href="product-sold.html">Карточка товара - статус ПРОДАН</a></li>
-    <li><a href="product-archive.html">Карточка товара - статус В АРХИВЕ</a></li>
-    <li><a href="terms.html">Условия</a></li>
-    <li><a href="cart.html">Корзина</a></li>
-    <li><a href="order.html">Оформление заказа</a></li>
-    <li><a href="order-complete.html">Заказ сформирован</a></li>
-  </ul>
-  <hr>
-  
-  <hr>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p><p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p><p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p><p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p><p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p>
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Корзина</a></li>
+      <li><a href="#">Оформление</a></li>
+      <li><a href="#">Страница оплаты</a></li>
+    </ul>
+  </div>
 </div>
+<section class="order-complete page-offset">
+  <div class="container">
+    <div class="order-complete__inner">
+      <h1 class="order-complete__title page-title">Заказ сформирован</h1>
+      <p class="order-complete__subtitle">Ваш заказ №456 от 02.03.2023 15:40 успешно создан. Номер вашей оплаты: №456/1
+      </p>
+      <p class="order-complete__text">Вы можете следить за выполнением своего заказа в Личном кабинете в разделе
+        Мои заказы</p>
+      <div class="order-complete__payment">
+        <div class="order-complete__payment-title">Оплата заказа</div>
+        <ul>
+          <li>
+            <img src="img/visa.png" width="120" alt="visa electron">
+          </li>
+          <li>
+            <img src="img/mastercard.png" width="100" alt="mastercard">
+          </li>
+        </ul>
+        <p>Банковские карты. Услугу предоставляет сервис платежей “ЮKassa”</p>
+      </div>
+      <div class="order-complete__row">
+        <div class="order-complete__price-caption">Сумма к оплате:</div>
+        <div class="order-complete__price">10 000 ₽</div>
+        <button class="order-complete__btn btn-primary">Оплатить</button>
+      </div>
+      <p class="order-complete__caption">Вы будете перенаправлены на страницу оплаты</p>
+      <p class="order-complete__warning"><b>Обратите внимание:</b> если вы откажитесь от покупки, для возврата денег
+        вам придется обратиться в поддержку</p>
+    </div>
+  </div>
+</section>
+
 
     </main>
     

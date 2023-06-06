@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="css/main.css">
 
   
+<script src="https://api-maps.yandex.ru/2.1/?apikey=77094a60-f3bb-48a9-9cf0-a20797dba222&lang=ru_RU"
+  type="text/javascript"></script>
+
 </head>
 
 
@@ -124,68 +127,209 @@
     
     <main class="main">
       
-<style>
-  .test-list {
-    margin: 30px 0;
-  }
-
-  .test-list a {
-    padding: 10px;
-    font-size: 20px;
-  }
-</style>
-<div class="text-section">
-  <ul class="test-list">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="auction.html">Аукцион</a></li>
-    <li><a href="product.html">Карточка товара </a></li>
-    <li><a href="product-sold.html">Карточка товара - статус ПРОДАН</a></li>
-    <li><a href="product-archive.html">Карточка товара - статус В АРХИВЕ</a></li>
-    <li><a href="terms.html">Условия</a></li>
-    <li><a href="cart.html">Корзина</a></li>
-    <li><a href="order.html">Оформление заказа</a></li>
-    <li><a href="order-complete.html">Заказ сформирован</a></li>
-  </ul>
-  <hr>
-  
-  <hr>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p><p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p><p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p><p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p><p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p>
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Корзина</a></li>
+      <li><a href="#">Оформление</a></li>
+    </ul>
+  </div>
 </div>
+<section class="order page-offset">
+  <div class="container">
+    <div class="order__inner">
+      <h1 class="order__title page-title">Оформление заказа</h1>
+      <form class="order__body order-body order-body--start" action="#">
+        <div class="order__info">
+          <div class="order__box">
+            <h3 class="order__subtitle">Способы оплаты</h3>
+            <ul class="order__radios">
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ оплаты" value="Наличными в офисе">
+                  <span class="order-radio__text">Наличными в офисе</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ оплаты" value="Наличными курьеру при получении">
+                  <span class="order-radio__text">Наличными курьеру при получении</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" checked name="Способ оплаты" value="Банковской картой на сайте">
+                  <span class="order-radio__text">Банковской картой на сайте</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ оплаты" value="Банковской картой в офисе при получении">
+                  <span class="order-radio__text">Банковской картой в офисе при получении</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ оплаты" value="Банковской картой курьеру при получении">
+                  <span class="order-radio__text">Банковской картой курьеру при получении</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ оплаты" value="Банковским переводом">
+                  <span class="order-radio__text">Банковским переводом</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ оплаты" value="СБП">
+                  <span class="order-radio__text">СБП</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio order-radio--select">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ оплаты" value="Другие способы оплаты">
+                  <span class="choices-select order__select">
+                    <select>
+                      <option value="1">Другие способы оплаты</option>
+                      <option value="2">Другие способы оплаты 2</option>
+                      <option value="3">Другие способы оплаты 3</option>
+                    </select>
+                  </span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="order__box">
+            <h3 class="order__subtitle">Способы доставки</h3>
+            <ul class="order__radios">
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" checked name="Способ доставки" value="Самовывоз">
+                  <span class="order-radio__text">Самовывоз</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ доставки" value="Курьером по Москве и МО">
+                  <span class="order-radio__text">Курьером по Москве и МО</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ доставки" value="СДЭК">
+                  <span class="order-radio__text">СДЭК</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ доставки" value="Пикпоинт">
+                  <span class="order-radio__text">Пикпоинт</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ доставки" value="Почта РФ">
+                  <span class="order-radio__text">Почта РФ</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+              <li class="order-radio">
+                <label class="order-radio__label">
+                  <input type="radio" name="Способ доставки" value="EMS">
+                  <span class="order-radio__text">EMS</span>
+                  <span class="order-radio__bg"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="order__box">
+            <div class="order__map map" id="order-map" data-coords="[55.755864, 37.617698]"></div>
+          </div>
+          <div class="order__box">
+            <h3 class="order__subtitle">Контактная информация</h3>
+            <div class="order__form">
+              <div class="order__form-row">
+                <input class="order__form-item form-input" type="tel" placeholder="Телефон">
+                <input class="order__form-item form-input" type="text" placeholder="Город">
+              </div>
+              <div class="order__form-row">
+                <input class="order__form-item form-input" type="email" placeholder="Почта">
+                <input class="order__form-item form-input" type="text" placeholder="Имя">
+              </div>
+              <textarea class="order__form-item form-input" placeholder="Комментарий"></textarea>
+              <label class="form-checkbox form-checkbox--order">
+                <input type="checkbox" value="Да" name="Условия">
+                <span class="form-checkbox__box"></span>
+                <span class="form-checkbox__text">Согласен с условиями <a href="#" target="_blank">обработки
+                    данных</a></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="order-body__total">
+          <div class="order-body__title order-body__title--offset-sm">Заказ №435</div>
+          <div class="order-body__preview order-preview">
+            <div class="order-preview__img">
+              <img src="img/catalog-2.jpg" width="122" height="122" alt="">
+            </div>
+            <div class="order-preview__content">
+              <a class="order-preview__title" href="#">DAVID BOWIE — Legacy (The Very Best Of) (2LP)</a>
+              <div class="order-preview__price"><span>3x</span> 2 334 ₽</div>
+            </div>
+          </div>
+          <div class="order-body__table order-body__table--border">
+            <table>
+              <tr>
+                <th>Кол-во лотов</th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Сумма по лотам</th>
+                <td>8 610 ₽</td>
+              </tr>
+              <tr>
+                <th>Скидка</th>
+                <td>300 ₽</td>
+              </tr>
+              <tr>
+                <th>Стоимость доставки</th>
+                <td>0 ₽</td>
+              </tr>
+              <tr>
+                <th>Способ оплаты</th>
+                <td>0 ₽</td>
+              </tr>
+            </table>
+          </div>
+          <div class="order-body__table">
+            <table>
+              <tr>
+                <th>ИТОГО</th>
+                <td>8 910₽</td>
+              </tr>
+            </table>
+          </div>
+          <a class="order-body__btn btn-primary" href="#">Подтвердить заказ</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 
     </main>
     

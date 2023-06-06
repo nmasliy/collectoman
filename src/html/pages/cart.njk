@@ -1,0 +1,13 @@
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block content %}
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Корзина</a></li>
+    </ul>
+  </div>
+</div>
+{% include "../templates/sections/cart.njk" %}
+{% endblock content %}

@@ -1,0 +1,139 @@
+.order-complete {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    color: $light-grey-color;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    color: $grey-color;
+  }
+
+  &__payment {
+    margin-bottom: 40px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    li {
+      @include mr(80px);
+    }
+
+    p {
+      font-weight: 500;
+      color: $light-grey-color;
+    }
+  }
+
+  &__payment-title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    color: $grey-color;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__price-caption {
+    margin-right: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    color: $light-grey-color;
+  }
+
+  &__price {
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    color: $grey-color;
+  }
+
+  &__caption {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #808080;
+  }
+
+  &__warning {
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    color: $light-grey-color;
+
+    b {
+      font-weight: 500;
+      color: $black-color;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .order-complete {
+    &__warning,
+    &__price,
+    &__price-caption,
+    &__payment-title,
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .order-complete {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__price-caption {
+      margin-right: 30px;
+    }
+
+    &__payment {
+      li {
+        @include mr(40px);
+      }
+
+      img {
+        width: 70%;
+        max-width: 86px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    &__btn {
+      flex-grow: 1;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    &__caption,
+    &__subtitle {
+      font-size: 12px;
+    }
+  }
+}
