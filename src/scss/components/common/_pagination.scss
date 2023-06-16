@@ -1,0 +1,59 @@
+.pagination {
+  padding: 40px 0;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__arrow {
+    a {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background: url("../img/arrow-icon.svg") center no-repeat;
+      background-color: $purple-color;
+      transition: background-color $transition;
+
+      @include hover {
+        background-color: $second-light-purple-color;
+      }
+    }
+  }
+
+  &__item {
+    margin: 0 5px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    color: $light-grey-color;
+    transition: color $transition;
+
+    @include hover {
+      color: $second-light-purple-color;
+    }
+  }
+
+  &__arrow--prev {
+    margin-right: 20px;
+    transform: rotate(180deg);
+  }
+
+  &__arrow--next {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .pagination {
+    display: none;
+  }
+}
