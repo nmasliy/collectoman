@@ -1,0 +1,147 @@
+.catalog-card {
+  counter-increment: catalog-list;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $light-grey-color;
+  border-radius: 15px;
+  padding: 16px 15px;
+  box-shadow: 0 30px 60px rgba(128, 64, 168, 5%);
+  background-color: $white-color;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+
+  &__tag {
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 5px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $white-color;
+    background-color: $second-light-purple-color;
+  }
+
+  &__num {
+    font-weight: 500;
+    color: $light-grey-color;
+
+    &::after {
+      content: "№0" counter(catalog-list);
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    border: 1px solid $light-grey-color;
+    border-radius: 5px;
+    padding: 0 20px;
+
+    img {
+      width: 100%;
+    }
+
+    picture {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $light-grey-color;
+    padding: 5px 0;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &__key {
+    color: $light-grey-color;
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-left: 8px;
+    }
+  }
+
+  &__btn-bid {
+    margin-bottom: 8px;
+    border: 2px solid transparent;
+    color: $white-color;
+    background-color: $red-color;
+    transition: border-color $transition, color $transition, background-color $transition;
+  }
+
+  &__btn-buy {
+    color: $white-color;
+    background-color: $purple-color;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  &:nth-child(9) ~ .catalog-card .catalog-card__num {
+    &::after {
+      content: "№" counter(catalog-list);
+    }
+  }
+
+  &__btn-bid,
+  &__btn-buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    padding: 13px 15px;
+    height: 50px;
+    font-weight: 500;
+    line-height: normal;
+
+    span {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      margin-left: 7px;
+    }
+
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  @include hover {
+    .catalog-card__btn-bid {
+      border-color: $red-color;
+      color: $red-color;
+      background-color: $white-color;
+
+      .icon-hint {
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 11.125C7.67708 11.125 7.82563 11.065 7.94563 10.945C8.06521 10.8254 8.125 10.6771 8.125 10.5V7.98438C8.125 7.80729 8.06521 7.66146 7.94563 7.54687C7.82563 7.43229 7.67708 7.375 7.5 7.375C7.32292 7.375 7.17458 7.43479 7.055 7.55437C6.935 7.67437 6.875 7.82292 6.875 8V10.5156C6.875 10.6927 6.935 10.8385 7.055 10.9531C7.17458 11.0677 7.32292 11.125 7.5 11.125ZM7.5 6.125C7.67708 6.125 7.82563 6.065 7.94563 5.945C8.06521 5.82542 8.125 5.67708 8.125 5.5C8.125 5.32292 8.06521 5.17438 7.94563 5.05438C7.82563 4.93479 7.67708 4.875 7.5 4.875C7.32292 4.875 7.17458 4.93479 7.055 5.05438C6.935 5.17438 6.875 5.32292 6.875 5.5C6.875 5.67708 6.935 5.82542 7.055 5.945C7.17458 6.065 7.32292 6.125 7.5 6.125ZM7.5 14.25C6.63542 14.25 5.82292 14.0858 5.0625 13.7575C4.30208 13.4296 3.64063 12.9844 3.07813 12.4219C2.51563 11.8594 2.07042 11.1979 1.7425 10.4375C1.41417 9.67708 1.25 8.86458 1.25 8C1.25 7.13542 1.41417 6.32292 1.7425 5.5625C2.07042 4.80208 2.51563 4.14063 3.07813 3.57813C3.64063 3.01563 4.30208 2.57021 5.0625 2.24187C5.82292 1.91396 6.63542 1.75 7.5 1.75C8.36458 1.75 9.17708 1.91396 9.9375 2.24187C10.6979 2.57021 11.3594 3.01563 11.9219 3.57813C12.4844 4.14063 12.9296 4.80208 13.2575 5.5625C13.5858 6.32292 13.75 7.13542 13.75 8C13.75 8.86458 13.5858 9.67708 13.2575 10.4375C12.9296 11.1979 12.4844 11.8594 11.9219 12.4219C11.3594 12.9844 10.6979 13.4296 9.9375 13.7575C9.17708 14.0858 8.36458 14.25 7.5 14.25ZM7.5 13C8.88542 13 10.0652 12.5131 11.0394 11.5394C12.0131 10.5652 12.5 9.38542 12.5 8C12.5 6.61458 12.0131 5.43479 11.0394 4.46062C10.0652 3.48687 8.88542 3 7.5 3C6.11458 3 4.935 3.48687 3.96125 4.46062C2.98708 5.43479 2.5 6.61458 2.5 8C2.5 9.38542 2.98708 10.5652 3.96125 11.5394C4.935 12.5131 6.11458 13 7.5 13Z' fill='%23EE2F2F'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+}

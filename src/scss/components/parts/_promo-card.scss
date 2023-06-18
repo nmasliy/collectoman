@@ -1,0 +1,69 @@
+.promo-card {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid $light-grey-color;
+  border-radius: 20px;
+  padding: 20px;
+  background: $white-color;
+  gap: 38px;
+
+  &__img {
+    img {
+      vertical-align: middle;
+      height: 250px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    color: $black-color;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    color: $light-grey-color;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__date {
+    margin-right: 15px;
+    font-weight: 500;
+    color: $light-grey-color;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .promo-card {
+    display: block;
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__btn {
+      font-size: 12px;
+    }
+
+    &__img {
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__text,
+    &__date {
+      font-size: 12px;
+    }
+  }
+}

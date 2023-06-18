@@ -1,0 +1,28 @@
+.promo {
+  padding-bottom: 160px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    @include mb(40px);
+  }
+
+  &__btn-wrapper {
+    display: none;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .promo {
+    &__list {
+      margin-bottom: 40px;
+    }
+
+    &__btn-wrapper {
+      display: block;
+    }
+  }
+}
