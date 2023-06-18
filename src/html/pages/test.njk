@@ -1,47 +1,66 @@
-{% extends "../templates/layouts/layout.njk" %}
-{% block content %}
+{% extends "../templates/layouts/layout.njk" %} {% block content %}
 <style>
   .test-list {
     margin: 30px 0;
   }
 
-  .test-list a {
-    padding: 10px;
+  .test-list li {
     font-size: 20px;
+  }
+
+  .test-list a {
+    padding: 10px 0;
   }
 </style>
 <div class="text-section">
-  <ul class="test-list">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="auction.html">Аукцион</a></li>
-    <li><a href="product.html">Карточка товара </a></li>
-    <li><a href="product-sold.html">Карточка товара - статус ПРОДАН</a></li>
-    <li><a href="product-archive.html">Карточка товара - статус В АРХИВЕ</a></li>
-    <li><a href="terms.html">Условия</a></li>
-    <hr>
-    <li><a href="cart.html">Корзина</a></li>
-    <li><a href="order.html">Оформление заказа</a></li>
-    <li><a href="order-complete.html">Заказ сформирован</a></li>
-    <hr>
-    <li><a href="schedule.html">Расписание аукционов</a></li>
-    <li><a href="news.html">Новости</a></li>
-    <li><a href="promo.html">Акции</a></li>
-    <li><a href="text.html">Текстовая страница (Акции, Как выставить лот)</a></li>
-    <hr>
-    <li><a href="favorites.html">Избранное</a></li>
-  </ul>
-  <hr>
-  {# <button class="btn-primary" data-modal-open="modal-call">Модалка обратный звонок</button> #}
-  <hr>
-  {% for i in range(0, 5) -%}
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam
-    quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-    dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam
-    ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit amet
-    consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-    deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-  </p>
-  {%- endfor %}
+  <div class="container">
+    <ul class="test-list">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="auction.html">Аукцион</a></li>
+      <li><a href="product.html">Карточка товара </a></li>
+      <li><a href="product-sold.html">Карточка товара - статус ПРОДАН</a></li>
+      <li>
+        <a href="product-archive.html">Карточка товара - статус В АРХИВЕ</a>
+      </li>
+      <li><a href="terms.html">Условия</a></li>
+      <hr />
+      <li><a href="cart.html">Корзина</a></li>
+      <li><a href="order.html">Оформление заказа</a></li>
+      <li><a href="order-complete.html">Заказ сформирован</a></li>
+      <hr />
+      <li><a href="schedule.html">Расписание аукционов</a></li>
+      <li><a href="news.html">Новости</a></li>
+      <li><a href="promo.html">Акции</a></li>
+      <li>
+        <a href="text.html">Текстовая страница (Акции, Как выставить лот)</a>
+      </li>
+      <hr />
+      <li><a href="favorites.html">Избранное</a></li>
+      <hr />
+      <li>Попапы</li>
+      <li>
+        <button class="btn-primary" data-modal-open="modal-subscribe">Попап после успешной подписки</button>
+        <button class="btn-primary" data-modal-open="modal-login">Попап входа, авторизации</button>
+        <button class="btn-primary" data-modal-open="modal-call">Попап обратного звонка</button>
+        <button class="btn-primary" data-modal-open="modal-order">Попап после оформления заказа</button>
+      </li>
+      <hr />
+    </ul>
+    <hr />
+    {% for i in range(0, 5) -%}
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
+      cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
+      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi
+      facere? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
+      cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
+      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi
+      facere? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
+      cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
+      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi
+      facere?
+    </p>
+    {%- endfor %}
+  </div>
 </div>
 {% endblock content %}

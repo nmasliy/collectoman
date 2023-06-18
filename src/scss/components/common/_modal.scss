@@ -1,5 +1,5 @@
 .modal {
-  $transition: opacity 0.3s ease-out;
+  $modal-transition: opacity 0.3s ease-out;
 
   position: fixed;
   left: 0;
@@ -13,12 +13,12 @@
   color: $black-color;
   background-color: rgba($black-color, 0.5);
   opacity: 0;
-  transition: $transition;
+  transition: $modal-transition;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 15px;
     width: 100%;
     height: var(--window-height);
   }
@@ -27,23 +27,146 @@
     position: relative;
     overflow: auto;
     margin: auto;
-    border-radius: 12px;
-    padding: 40px 30px;
+    border: 1px solid $light-grey-color;
+    border-radius: 20px;
+    padding: 56px 30px 46px;
     width: 100%;
     height: auto;
-    max-width: 800px;
+    max-width: 720px;
+    box-shadow: 15px 0 30px rgba(0, 0, 0, 10%);
     background-color: $white-color;
   }
 
   &__close {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 30px;
+    top: 30px;
     outline: transparent;
     border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
     box-shadow: none;
-    background: 0;
+    background: url("../img/close-icon.svg") center no-repeat;
+    opacity: 0.3;
+    transition: $modal-transition;
     cursor: pointer;
+
+    @include hover {
+      opacity: 1;
+    }
+  }
+
+  &__form-input {
+    @include mb(10px);
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 440px;
+    text-align: center;
+  }
+
+  &__spacer {
+    @include flex-center;
+
+    min-height: 280px;
+  }
+
+  &__title {
+    margin: 0 auto 20px;
+    max-width: 325px;
+    font-weight: 500;
+    font-size: 20px;
+    color: $grey-color;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    color: $light-grey-color;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin: -10px;
+  }
+
+  &__auth-items {
+    @include grid(2, 16px);
+
+    margin: 20px 0 10px;
+  }
+
+  &__auth {
+    &.is-expanded {
+      .modal__auth-item:nth-child(2) ~ .modal__auth-item {
+        display: flex;
+      }
+
+      .modal__auth-btn {
+        display: none;
+      }
+    }
+  }
+
+  &__caption {
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    color: $light-grey-color;
+  }
+
+  &__auth-btn {
+    font-weight: 500;
+    font-size: 12px;
+    color: $light-grey-color;
+    cursor: pointer;
+
+    span {
+      display: inline-block;
+      padding-right: 20px;
+      background: url("../img/chevron-down-icon.svg") right no-repeat;
+    }
+  }
+
+  &__auth-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 41px;
+    padding: 7px 10px;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    color: $black-color;
+    background: #c5c5c5;
+    transition: $transition;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    &:nth-child(2) ~ .modal__auth-item {
+      display: none;
+    }
+
+    &--blue {
+      color: $white-color;
+      background-color: #2c55e7;
+    }
+  }
+
+  &__form-btn {
+    margin-top: 20px;
+  }
+
+  &__form {
+    text-align: center;
+  }
+
+  &__btn {
+    margin: 10px;
   }
 
   &[aria-hidden="true"] {
@@ -56,5 +179,46 @@
 
   &.is-open {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .modal__spacer {
+    min-height: auto;
+  }
+
+  .modal__close {
+    right: 15px;
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .modal {
+    &__auth-items {
+      display: block;
+    }
+
+    &__auth-item {
+      margin-top: 8px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__inner {
+      padding: 46px 20px 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .modal__buttons {
+    flex-direction: column;
+  }
+
+  .modal__btn {
+    flex-grow: 1;
   }
 }
