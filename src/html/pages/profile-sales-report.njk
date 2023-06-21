@@ -1,0 +1,24 @@
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block content %}
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Личный кабинет</a></li>
+    </ul>
+  </div>
+</div>
+<section class="profile">
+  <div class="container">
+    <div class="profile__inner">
+      <h1 class="profile__title page-title">Личный кабинет</h1>
+      {% include "../templates/common/profile-head.njk" %}
+      <div class="profile__content">
+        {% include "../templates/sections/profile/profile-menu.njk" %}
+        {% include "../templates/sections/profile/sales-report.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

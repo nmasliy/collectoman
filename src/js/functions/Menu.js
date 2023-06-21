@@ -16,36 +16,48 @@ class Menu {
       burgerActiveCaption: 'Закрыть меню',
       transitionDelay: 400,
       breakpoint: 1024,
+      disableScroll: true
     };
     this.options = { ...defaultOptions, ...options };
     this._init();
   }
 
   async open() {
-    this.options.overlay.style.display = 'block';
+    if (this.options.overlay) {
+      this.options.overlay.style.display = 'block';
+    }
     this.options.menu.style.display = 'block';
     this.options.burger.setAttribute('aria-expanded', 'true');
     this.options.burger.setAttribute('aria-label', this.options.burgerActiveCaption);
-    this.html.classList.add('disable-scroll');
+
+    if (this.options.disableScroll) {
+      this.html.classList.add('disable-scroll');
+    }
 
     await waitFor(1);
 
-    this.options.overlay.classList.add('is-active');
+    this.options.overlay?.classList.add('is-active');
     this.options.menu.classList.add('is-active');
     this.options.burger.classList.add('is-active');
   }
 
   async close() {
-    this.options.overlay.classList.remove('is-active');
+    this.options.overlay?.classList.remove('is-active');
     this.options.menu.classList.remove('is-active');
     this.options.burger.classList.remove('is-active');
     this.options.burger.setAttribute('aria-expanded', 'false');
     this.options.burger.setAttribute('aria-label', this.options.burgerCaption);
-    this.html.classList.remove('disable-scroll');
+
+    if (this.options.disableScroll) {
+      this.html.classList.remove('disable-scroll');
+    }
+    
 
     await waitFor(this.options.transitionDelay);
 
-    this.options.overlay.style.display = '';
+    if (this.options.overlay) {
+      this.options.overlay.style.display = '';
+    }
     this.options.menu.style.display = '';
   }
 

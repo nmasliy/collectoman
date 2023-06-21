@@ -13,3 +13,16 @@ const menu = new Menu({
   transitionDelay: 400,
   breakpoint: 991,
 });
+
+if (document.querySelector('.profile-menu')) {
+  const profileMenu = new Menu({
+    menu: document.querySelector('.profile-menu'),
+    burger: document.querySelector('.profile-menu__burger'),
+    navLinks: document.querySelectorAll('.profile-menu li a'),
+    burgerCaption: 'Открыть меню',
+    burgerActiveCaption: 'Закрыть меню',
+    transitionDelay: 460,
+    breakpoint: 99999,
+    disableScroll: false
+  });
+}

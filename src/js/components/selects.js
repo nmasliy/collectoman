@@ -11,7 +11,9 @@ selectNodes?.forEach(el => {
 		duplicateItemsAllowed: false,
 	});
 
-  const resetBtn = el.closest('form').querySelector('button[type="reset"]');
+  const form = el.closest('form');
+
+  const resetBtn = form?.querySelector('button[type="reset"]');
 
   resetBtn?.addEventListener('click', () => {
     choices.setChoiceByValue(value);
