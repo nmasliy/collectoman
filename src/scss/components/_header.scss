@@ -239,6 +239,13 @@
     &__nav {
       display: none;
     }
+
+    &.is-active {
+      .header-bottom {
+        background-color: $white-color;
+        transition: background $menu-transition;
+      }
+    }
   }
 
   .header-logo {

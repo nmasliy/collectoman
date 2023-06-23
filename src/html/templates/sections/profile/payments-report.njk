@@ -19,12 +19,13 @@
   <div class="profile-body__main">
     <div class="profile-body__top">
       <div class="profile-body__top-col">
-        <div class="profile-body__title">Отчет о&nbsp;продажах</div>
-        <div class="profile-body__top-date">с 01.01.2023 по 01.02.2023 <i class="icon-edit" role="button"
+        <div class="profile-body__title">Отчет о&nbsp;выплатах</div>
+        <div class="profile-body__top-date">с 01.01.2023 по 01.02.202 <i class="icon-edit" role="button"
             tabindex="0"></i> </div>
       </div>
       <div class="profile-body__top-col">
-        <div class="profile-body__top-caption">1 243 лотов</div>
+        <div class="profile-body__top-balance" data-text-mobile="Баланс">Текущий баланс <span>2 000р <i
+              class="icon-hint-grey"></i> </span></div>
       </div>
     </div>
     <div class="profile-body__content">
@@ -36,8 +37,8 @@
               <th class="profile-body__table-heading">Фото и название</th>
               <th class="profile-body__table-vendor">Артикул</th>
               <th class="profile-body__table-date">Дата выплаты</th>
-              <th class="profile-body__table-sum">Статус выплаты</th>
-              <th class="profile-body__table-status">Сумма продажи</th>
+              <th class="profile-body__table-status">Статус выплаты</th>
+              <th class="profile-body__table-sum">Сумма продажи</th>
             </tr>
           </thead>
           <tbody>
@@ -256,7 +257,7 @@
       </div>
     </div>
     <div class="profile-body__footer">
-      <div class="profile-body__footer-caption">Общая сумма продаж <span class="profile-body__footer-price">10
+      <div class="profile-body__footer-caption">Общая сумма выплат <span class="profile-body__footer-price">8
           000р <i class="icon-hint-grey"></i> </span> </div>
       {% include "../../common/pagination.njk" %}
     </div>

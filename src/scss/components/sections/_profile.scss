@@ -1,9 +1,6 @@
 .profile {
   padding-bottom: 200px;
 
-  &__inner {
-  }
-
   &__title {
     margin-bottom: 20px;
   }
@@ -21,10 +18,34 @@
     margin-bottom: 20px;
   }
 
-  &__body {
-  }
-
   .pagination {
     padding: 20px 0 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .profile {
+    &__content {
+      display: grid;
+      grid-template-columns: 60px auto;
+      gap: 20px;
+    }
+
+    &__menu {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    &__inner {
+      padding-top: 20px;
+    }
+
+    &__content {
+      display: block;
+      min-height: auto;
+    }
   }
 }

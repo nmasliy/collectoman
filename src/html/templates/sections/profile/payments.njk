@@ -19,12 +19,22 @@
   <div class="profile-body__main">
     <div class="profile-body__top">
       <div class="profile-body__top-col">
-        <div class="profile-body__title">Отчет о&nbsp;продажах</div>
+        <div class="profile-body__title">Выплаты</div>
+        <div class="profile-body__top-select-wrapper">
+          <span>Выберите Аукцион:</span>
+          <div class="profile-body__top-select choices-select choices-select--right">
+            <select>
+              <option value="1" selected>A1</option>
+              <option value="2">A2</option>
+              <option value="3">A3</option>
+            </select>
+          </div>
+        </div>
         <div class="profile-body__top-date">с 01.01.2023 по 01.02.2023 <i class="icon-edit" role="button"
             tabindex="0"></i> </div>
       </div>
       <div class="profile-body__top-col">
-        <div class="profile-body__top-caption">1 243 лотов</div>
+        <div class="profile-body__top-caption profile-body__top-caption--offset">1 243 лотов</div>
       </div>
     </div>
     <div class="profile-body__content">
@@ -34,10 +44,9 @@
             <tr>
               <th class="profile-body__table-num">№</th>
               <th class="profile-body__table-heading">Фото и название</th>
-              <th class="profile-body__table-vendor">Артикул</th>
-              <th class="profile-body__table-date">Дата выплаты</th>
-              <th class="profile-body__table-sum">Статус выплаты</th>
-              <th class="profile-body__table-status">Сумма продажи</th>
+              <th class="profile-body__table-price">Стоимость лота</th>
+              <th class="profile-body__table-sum">Сумма выплаты</th>
+              <th class="profile-body__table-status">Статус </th>
             </tr>
           </thead>
           <tbody>
@@ -53,13 +62,12 @@
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">28561735</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">22.09.2022</td>
-              <td class="profile-body__table-status" data-text="Статус выплаты">
-                <div>Не оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">10 000</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>9 000</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>9 000 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status" data-text="Статус">
+                <div>Не оплачен</div>
               </td>
             </tr>
             <tr>
@@ -70,17 +78,16 @@
                     <img width="50" height="50" src="img/profile-2.jpg" alt="фото">
                   </div>
                   <div class="profile-body__table-col">
-                    Radiohead – Hail To The Thief
+                    Майлз Дэвис – Bitches Brew
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">75716807</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">14.05.2023</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
-                <div>Оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">5 000</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>9 000</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>4 500 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус">
+                <div>Оплачен</div>
               </td>
             </tr>
             <tr>
@@ -95,13 +102,12 @@
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">44584881</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">15.08.2021</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
-                <div>Оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">8 000</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>7 200</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>7 200 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус">
+                <div>Оплачен</div>
               </td>
             </tr>
             <tr>
@@ -116,13 +122,12 @@
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">18898444</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">05.08.2022</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
-                <div>Оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">7 000</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>6 300</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>6 300 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус">
+                <div>Оплачен</div>
               </td>
             </tr>
             <tr>
@@ -137,13 +142,12 @@
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">75632847</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">14.05.2023</td>
-              <td class="profile-body__table-status" data-text="Статус выплаты">
-                <div>Не оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">11 000</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>9 900</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>9 900 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status" data-text="Статус">
+                <div>Не оплачен</div>
               </td>
             </tr>
             <tr>
@@ -158,13 +162,12 @@
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">46711465</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">15.09.2022</td>
-              <td class="profile-body__table-status" data-text="Статус выплаты">
-                <div>Не оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">4 000</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>3 600</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>3 600 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status" data-text="Статус">
+                <div>Не оплачен</div>
               </td>
             </tr>
             <tr>
@@ -179,13 +182,12 @@
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">03861560</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">16.01.2023</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
-                <div>Оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">4 500</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>4 050</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>4 050 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус">
+                <div>Оплачен</div>
               </td>
             </tr>
             <tr>
@@ -200,13 +202,12 @@
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">63155378</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">24.09.2022</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
-                <div>Оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">5 000</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>4 500</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>4 500 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус">
+                <div>Оплачен</div>
               </td>
             </tr>
             <tr>
@@ -221,13 +222,12 @@
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">50532004</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">02.09.2021</td>
-              <td class="profile-body__table-status" data-text="Статус выплаты">
-                <div>Не оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">6 000</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>5 400</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>5 400 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status" data-text="Статус">
+                <div>Не оплачен</div>
               </td>
             </tr>
             <tr>
@@ -235,20 +235,19 @@
               <td class="profile-body__table-heading">
                 <div class="profile-body__table-row">
                   <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-1.jpg" alt="фото">
+                    <img width="50" height="50" src="img/profile-10.jpg" alt="фото">
                   </div>
                   <div class="profile-body__table-col">
                     Radiohead – Hail To The Thief
                   </div>
                 </div>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">14168550</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">06.05.2023</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
-                <div>Оплачен</div>
+              <td class="profile-body__table-price" data-text="Стоимость лота">7 000</td>
+              <td class="profile-body__table-sum" data-text="Цена продажи">
+                <div>6 300</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>6 300 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус">
+                <div>Оплачен</div>
               </td>
             </tr>
           </tbody>
@@ -256,8 +255,6 @@
       </div>
     </div>
     <div class="profile-body__footer">
-      <div class="profile-body__footer-caption">Общая сумма продаж <span class="profile-body__footer-price">10
-          000р <i class="icon-hint-grey"></i> </span> </div>
       {% include "../../common/pagination.njk" %}
     </div>
   </div>

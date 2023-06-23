@@ -16,17 +16,27 @@ class Menu {
       burgerActiveCaption: 'Закрыть меню',
       transitionDelay: 400,
       breakpoint: 1024,
-      disableScroll: true
+      display: 'block',
+      disableScroll: true,
+      onOpen: () => {},
+      onClose: () => {},
     };
     this.options = { ...defaultOptions, ...options };
+
+    this.closeHandler = this.close.bind(this, options);
+    this.toggleHandler = this.toggle.bind(this, options);
+
     this._init();
   }
 
   async open() {
+    this.options.onOpen();
+
     if (this.options.overlay) {
       this.options.overlay.style.display = 'block';
     }
-    this.options.menu.style.display = 'block';
+
+    this.options.menu.style.display = this.options.display;
     this.options.burger.setAttribute('aria-expanded', 'true');
     this.options.burger.setAttribute('aria-label', this.options.burgerActiveCaption);
 
@@ -36,13 +46,21 @@ class Menu {
 
     await waitFor(1);
 
-    this.options.overlay?.classList.add('is-active');
+    if (this.options.overlay) {
+      this.options.overlay.classList.add('is-active');
+    }
+
     this.options.menu.classList.add('is-active');
     this.options.burger.classList.add('is-active');
   }
 
   async close() {
-    this.options.overlay?.classList.remove('is-active');
+    this.options.onClose();
+
+    if (this.options.overlay) {
+      this.options.overlay.classList.remove('is-active');
+    }
+
     this.options.menu.classList.remove('is-active');
     this.options.burger.classList.remove('is-active');
     this.options.burger.setAttribute('aria-expanded', 'false');
@@ -51,13 +69,13 @@ class Menu {
     if (this.options.disableScroll) {
       this.html.classList.remove('disable-scroll');
     }
-    
 
     await waitFor(this.options.transitionDelay);
 
     if (this.options.overlay) {
       this.options.overlay.style.display = '';
     }
+
     this.options.menu.style.display = '';
   }
 
@@ -72,17 +90,17 @@ class Menu {
   }
 
   _addListeners() {
-    this.options.burger?.addEventListener('click', this.toggle.bind(this));
-    this.options.close?.addEventListener('click', this.close.bind(this));
-    this.options.overlay?.addEventListener('click', this.close.bind(this));
-    this.options.navLinks?.forEach((el) => el.addEventListener('click', this.close.bind(this)));
+    this.options.burger?.addEventListener('click', this.toggleHandler);
+    this.options.close?.addEventListener('click', this.closeHandler);
+    this.options.overlay?.addEventListener('click', this.closeHandler);
+    this.options.navLinks?.forEach((el) => el.addEventListener('click', this.closeHandler));
   }
 
   _removeListeners() {
-    this.options.burger?.removeEventListener('click', this.toggle.bind(this));
-    this.options.close?.removeEventListener('click', this.close.bind(this));
-    this.options.overlay?.removeEventListener('click', this.close.bind(this));
-    this.options.navLinks?.forEach((el) => el.removeEventListener('click', this.close.bind(this)));
+    this.options.burger?.removeEventListener('click', this.toggleHandler);
+    this.options.close?.removeEventListener('click', this.closeHandler);
+    this.options.overlay?.removeEventListener('click', this.closeHandler);
+    this.options.navLinks?.forEach((el) => el.removeEventListener('click', this.closeHandler));
   }
 
   _events() {
