@@ -7,7 +7,7 @@
 
   &__content {
     display: flex;
-    min-height: 60px;
+    min-height: 750px;
   }
 
   &__menu {
@@ -39,6 +39,18 @@
 
 @media screen and (max-width: 768px) {
   .profile {
+    &-docs {
+      .profile-body {
+        &__main {
+          margin-bottom: 0;
+        }
+
+        &__title {
+          display: none;
+        }
+      }
+    }
+
     &__inner {
       padding-top: 20px;
     }

@@ -17,4 +17,3 @@ const modals = new SimpleModal(options);
 modals.init();
 
 export default modals;
-

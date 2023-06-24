@@ -1,0 +1,14 @@
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block content %}
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="#">Главная страница</a></li>
+      <li><a href="#">Личный кабинет</a></li>
+      <li><a href="#">Информация о заказе</a></li>
+    </ul>
+  </div>
+</div>
+{% include "../templates/sections/profile/profile-order.njk" %}
+{% endblock content %}
