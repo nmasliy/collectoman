@@ -152,7 +152,7 @@
     <div class="profile-header__more">
       <button class="profile-header__more-btn"></button>
       <ul>
-        <li><a href="./profile-buyer.html">Войти как покупатель</a></li>
+        <li><a href="./profile-saler.html">Войти как продавец</a></li>
         <li><a href="#">Выйти</a></li>
       </ul>
     </div>
@@ -245,7 +245,7 @@
   <div class="profile-body__header">
     <ul class="profile-body__tabs">
       <li><a href="#">Мои лоты</a></li>
-      <li class="is-active"><a href="#">Мои продажи</a></li>
+      <li class="is-active"><a href="#">Мои заказы</a></li>
       <li><a href="#">Мои данные</a></li>
     </ul>
     <div class="profile-body__controls">
@@ -262,12 +262,22 @@
   <div class="profile-body__main">
     <div class="profile-body__top">
       <div class="profile-body__top-col">
-        <div class="profile-body__title">Отчет о&nbsp;продажах</div>
+        <div class="profile-body__title">Выплаты</div>
+        <div class="profile-body__top-select-wrapper">
+          <span>Выберите Аукцион:</span>
+          <div class="profile-body__top-select choices-select choices-select--right">
+            <select>
+              <option value="1" selected>A1</option>
+              <option value="2">A2</option>
+              <option value="3">A3</option>
+            </select>
+          </div>
+        </div>
         <div class="profile-body__top-date">с 01.01.2023 по 01.02.2023 <i class="icon-edit" role="button"
             tabindex="0"></i> </div>
       </div>
       <div class="profile-body__top-col">
-        <div class="profile-body__top-caption">1 243 лотов</div>
+        <div class="profile-body__top-caption profile-body__top-caption--offset">1 243 лотов</div>
       </div>
     </div>
     <div class="profile-body__content">
@@ -276,222 +286,152 @@
           <thead>
             <tr>
               <th class="profile-body__table-num">№</th>
-              <th class="profile-body__table-heading">Фото и название</th>
-              <th class="profile-body__table-vendor">Артикул</th>
-              <th class="profile-body__table-date">Дата выплаты</th>
-              <th class="profile-body__table-status">Статус выплаты</th>
-              <th class="profile-body__table-sum">Сумма продажи</th>
+              <th class="profile-body__table-order" data-text="№ заказа">№ заказа</th>
+              <th class="profile-body__table-date">Дата <br> заказа</th>
+              <th class="profile-body__table-sum">Сумма <br> заказа</th>
+              <th class="profile-body__table-status">Статус <br> оплаты</th>
+              <th class="profile-body__table-ship">Статус <br> заказа</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="profile-body__table-num" data-text="№">1</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-1.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    Radiohead – Hail To The Thief
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №456</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">28561735</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">22.09.2022</td>
-              <td class="profile-body__table-status" data-text="Статус выплаты">
+              <td class="profile-body__table-date" data-text="Дата заказа">04.03.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">4 568</td>
+              <td class="profile-body__table-status" data-text="Статус оплаты">
                 <div>Не оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>9 000 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Собран <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
             <tr>
               <td class="profile-body__table-num" data-text="№">2</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-2.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    Radiohead – Hail To The Thief
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №486</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">75716807</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">14.05.2023</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
+              <td class="profile-body__table-date" data-text="Дата заказа">22.09.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">3 687</td>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус оплаты">
                 <div>Оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>4 500 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Новый <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
             <tr>
               <td class="profile-body__table-num" data-text="№">3</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-3.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    My Bloody Valentine – Loveless
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №456</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">44584881</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">15.08.2021</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
-                <div>Оплачен</div>
+              <td class="profile-body__table-date" data-text="Дата заказа">04.03.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">4 568</td>
+              <td class="profile-body__table-status" data-text="Статус оплаты">
+                <div>Не оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>7 200 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Собран <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
             <tr>
               <td class="profile-body__table-num" data-text="№">4</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-4.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    Pink Floyd – Wish You Were Here
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №486</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">18898444</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">05.08.2022</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
+              <td class="profile-body__table-date" data-text="Дата заказа">22.09.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">3 687</td>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус оплаты">
                 <div>Оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>6 300 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Новый <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
             <tr>
               <td class="profile-body__table-num" data-text="№">5</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-5.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    The Beatles – Abbey Road
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №456</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">75632847</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">14.05.2023</td>
-              <td class="profile-body__table-status" data-text="Статус выплаты">
+              <td class="profile-body__table-date" data-text="Дата заказа">04.03.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">4 568</td>
+              <td class="profile-body__table-status" data-text="Статус оплаты">
                 <div>Не оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>9 900 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Собран <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
             <tr>
               <td class="profile-body__table-num" data-text="№">6</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-6.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    Daft Punk – Random Access Memories
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №486</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">46711465</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">15.09.2022</td>
-              <td class="profile-body__table-status" data-text="Статус выплаты">
-                <div>Не оплачен</div>
+              <td class="profile-body__table-date" data-text="Дата заказа">22.09.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">3 687</td>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус оплаты">
+                <div>Оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>3 600 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Новый <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
             <tr>
               <td class="profile-body__table-num" data-text="№">7</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-7.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    R.E.M. – Automatic For The People
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №456</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">03861560</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">16.01.2023</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
-                <div>Оплачен</div>
+              <td class="profile-body__table-date" data-text="Дата заказа">04.03.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">4 568</td>
+              <td class="profile-body__table-status" data-text="Статус оплаты">
+                <div>Не оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>4 050 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Собран <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
             <tr>
               <td class="profile-body__table-num" data-text="№">8</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-8.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    The Flaming Lips – The Soft Bulletin
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №486</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">63155378</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">24.09.2022</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
+              <td class="profile-body__table-date" data-text="Дата заказа">22.09.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">3 687</td>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус оплаты">
                 <div>Оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>4 500 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Новый <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
             <tr>
               <td class="profile-body__table-num" data-text="№">9</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-9.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    Стиви Уандер – Innervisions
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №456</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">50532004</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">02.09.2021</td>
-              <td class="profile-body__table-status" data-text="Статус выплаты">
+              <td class="profile-body__table-date" data-text="Дата заказа">04.03.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">4 568</td>
+              <td class="profile-body__table-status" data-text="Статус оплаты">
                 <div>Не оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>5 400 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Собран <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
             <tr>
               <td class="profile-body__table-num" data-text="№">10</td>
-              <td class="profile-body__table-heading">
-                <div class="profile-body__table-row">
-                  <div class="profile-body__table-col">
-                    <img width="50" height="50" src="img/profile-1.jpg" alt="фото">
-                  </div>
-                  <div class="profile-body__table-col">
-                    Radiohead – Hail To The Thief
-                  </div>
-                </div>
+              <td class="profile-body__table-order" data-text="№ заказа">
+                <a class="profile-body__table-name" href="#">Заказ №486</a>
               </td>
-              <td class="profile-body__table-vendor" data-text="Артикул">14168550</td>
-              <td class="profile-body__table-date" data-text="Дата выплаты">06.05.2023</td>
-              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус выплаты">
+              <td class="profile-body__table-date" data-text="Дата заказа">22.09.2022</td>
+              <td class="profile-body__table-sum" data-text="Сумма заказа">3 687</td>
+              <td class="profile-body__table-status profile-body__table-status--pay" data-text="Статус оплаты">
                 <div>Оплачен</div>
               </td>
-              <td class="profile-body__table-sum" data-text="Сумма продажи">
-                <div>6 300 <i class="icon-hint-grey"></i></div>
+              <td class="profile-body__table-ship" data-text="Статус заказа">
+                <div>Новый <i class="icon-hint-grey"></i></div>
               </td>
             </tr>
           </tbody>
@@ -499,8 +439,6 @@
       </div>
     </div>
     <div class="profile-body__footer">
-      <div class="profile-body__footer-caption">Общая сумма продаж <span class="profile-body__footer-price">10
-          000р <i class="icon-hint-grey"></i> </span> </div>
       <div class="pagination">
   <ul>
     <li class="pagination__arrow pagination__arrow--prev""><a href=" #"></a></li>
