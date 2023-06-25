@@ -38,12 +38,14 @@ if (document.querySelector('.profile-menu')) {
 
   function changeMenuOptions() {
     if (window.innerWidth <= 768) {
+      profileMenu.options.disableScroll = true;
       if (profileMenu.options.overlay) return;
 
       profileMenu.options.overlay = document.querySelector('.profile-overlay');
       profileMenu._removeListeners();
       profileMenu._addListeners();
     } else {
+      profileMenu.options.disableScroll = false;
       if (!profileMenu.options.overlay) return;
 
       profileMenu.options.overlay = null;
