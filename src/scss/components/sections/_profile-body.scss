@@ -165,6 +165,10 @@
     align-items: center;
     color: $purple-color;
 
+    > span {
+      margin-right: 20px;
+    }
+
     i {
       flex-shrink: 0;
       margin-left: 8px;
@@ -175,6 +179,12 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 1.3;
+    color: $light-grey-color;
+  }
+
+  &__top-balance-lg {
+    font-size: 25px;
+    line-height: 1.2;
     color: $light-grey-color;
   }
 
@@ -270,10 +280,49 @@
     td {
       background-color: $white-color;
     }
+
+    &--balance {
+      margin-bottom: 0;
+
+      th {
+        width: auto;
+        text-align: center;
+      }
+
+      td {
+        width: auto;
+        text-align: left;
+      }
+
+      .profile-body__table-status {
+        width: 150px;
+      }
+
+      .profile-body__table-sum {
+        width: 176px;
+        text-align: right;
+
+        i {
+          width: 13px;
+          height: 13px;
+        }
+      }
+
+      .profile-body__table-date {
+        width: 136px;
+        text-align: center;
+      }
+    }
   }
 
   &__table-sum {
+    > div {
+      display: inline-flex;
+      align-items: center;
+    }
+
     i {
+      flex-shrink: 0;
       margin-left: 9px;
     }
   }
@@ -323,6 +372,10 @@
   }
 
   .profile-body__table {
+    &-purpose {
+      text-align: left;
+    }
+
     &-order {
       text-align: left;
     }
@@ -404,6 +457,71 @@
   }
 }
 
+.profile-form {
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 750px;
+
+  &__box {
+    @include mb(40px);
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__items {
+    padding-top: 20px;
+  }
+
+  &__item {
+    @include mb(10px);
+
+    display: flex;
+    align-items: center;
+
+    span {
+      display: block;
+      flex-shrink: 0;
+      margin-right: 10px;
+      width: 85px;
+      font-weight: 500;
+      color: $light-grey-color;
+
+      &.profile-form__caption-wide {
+        width: 160px;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__radios {
+    margin-left: 40px;
+    padding-top: 8px;
+
+    .form-radio {
+      @include mb(10px);
+    }
+  }
+
+  &__btn-wrapper {
+    text-align: center;
+  }
+
+  &__policy {
+    margin-bottom: 40px;
+
+    .form-checkbox {
+      justify-content: center;
+    }
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .profile-body {
     &__table {
@@ -414,7 +532,25 @@
         padding: 6px 10px;
         width: 105px;
       }
+
+      &--balance {
+        .profile-body__table-purpose {
+          width: auto;
+        }
+
+        .profile-body__table-status {
+          width: 125px;
+        }
+
+        .profile-body__table-sum {
+          width: 140px;
+        }
+      }
     }
+  }
+
+  .profile-form {
+    max-width: 650px;
   }
 }
 
@@ -487,6 +623,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .profile-form {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
   .profile-body {
     .pagination {
       display: none;
@@ -580,7 +721,7 @@
         margin-top: 20px;
         border: 1px solid $light-grey-color;
         border-radius: 10px;
-        padding: 10px 20px;
+        padding: 10px 16px;
 
         &:first-child {
           margin-top: 0;
@@ -598,6 +739,45 @@
       &.hide-more-4-mobile {
         tr:nth-child(4) ~ tr {
           display: none;
+        }
+      }
+
+      &--balance {
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        td {
+          display: block;
+
+          &::before {
+            display: block;
+            margin-bottom: 10px;
+            margin-left: 0;
+          }
+
+          &:nth-child(3) {
+            border: none;
+          }
+
+          &:nth-child(2) {
+            width: 63%;
+          }
+        }
+
+        .profile-body__table {
+          &-date {
+            width: 37%;
+          }
+
+          &-sum {
+            width: 50%;
+          }
+
+          &-status {
+            width: 50%;
+          }
         }
       }
     }
@@ -671,6 +851,30 @@
           margin-bottom: 6px;
         }
       }
+
+      &--balance {
+        td {
+          margin: 0;
+          padding-top: 0;
+          padding-bottom: 10px;
+          font-size: 12px;
+
+          &::before {
+            margin-right: 0;
+          }
+
+          &:nth-child(1),
+          &:nth-child(2) {
+            padding-top: 10px;
+            padding-bottom: 40px;
+          }
+
+          &:nth-child(even) {
+            padding-left: 15px;
+            text-align: right;
+          }
+        }
+      }
     }
   }
 
@@ -733,6 +937,31 @@
 }
 
 @media screen and (max-width: 580px) {
+  .profile-form {
+    &__policy {
+      font-size: 12px;
+    }
+
+    &__radios {
+      padding-top: 0;
+      font-size: 12px;
+    }
+
+    &__item {
+      span {
+        font-size: 12px;
+
+        &.profile-form__caption-wide {
+          width: 90px;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+  }
+
   .profile-body {
     &__header {
       margin-bottom: -1px;
@@ -744,6 +973,10 @@
 
     &__top-balance {
       &::before {
+        font-size: 16px;
+      }
+
+      &-lg {
         font-size: 16px;
       }
 
@@ -788,6 +1021,23 @@
 }
 
 @media screen and (max-width: 460px) {
+  .profile-form {
+    &__row {
+      display: block;
+    }
+
+    &__radios {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+
+    &__policy {
+      .form-checkbox {
+        justify-content: flex-start;
+      }
+    }
+  }
+
   .profile-body {
     &__top-date {
       max-width: 112px;

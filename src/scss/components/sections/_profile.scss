@@ -61,3 +61,43 @@
     }
   }
 }
+
+@media screen and (max-width: 460px) {
+  .profile-balance {
+    .profile-body {
+      &__top-date {
+        display: block;
+        max-width: 100%;
+
+        i {
+          position: relative;
+          bottom: 5px;
+          margin-left: 23px;
+        }
+
+        span {
+          display: block;
+        }
+      }
+
+      &__controls {
+        justify-content: flex-start;
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+
+      &__download {
+        padding-left: 0;
+        width: 30px;
+        height: 30px;
+        font-size: 0;
+      }
+    }
+  }
+
+  .profile-data {
+    .profile-body__title {
+      width: auto;
+    }
+  }
+}

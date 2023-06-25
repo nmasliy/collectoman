@@ -6,12 +6,21 @@ moveElementOnBreakpoint(
   { toSelector: '.profile-header__content', toPosition: 'afterend' },
   580
 )
-moveElementOnBreakpoint(
-  '.profile-body__controls',
-  { fromSelector: '.profile-body__header', fromPosition: 'beforeend' },
-  { toSelector: '.profile-body__top', toPosition: 'afterend' },
-  460
-)
+if (document.querySelector('.profile-balance')) {
+  moveElementOnBreakpoint(
+    '.profile-body__controls',
+    { fromSelector: '.profile-body__header', fromPosition: 'beforeend' },
+    { toSelector: '.profile-body__top-balance-lg', toPosition: 'afterend' },
+    460
+  )
+} else {
+  moveElementOnBreakpoint(
+    '.profile-body__controls',
+    { fromSelector: '.profile-body__header', fromPosition: 'beforeend' },
+    { toSelector: '.profile-body__top', toPosition: 'afterend' },
+    460
+  )
+}
 moveElementOnBreakpoint(
   '.profile-body__top-date',
   { fromSelector: '.profile-body__top-select-wrapper', fromPosition: 'afterend' },
