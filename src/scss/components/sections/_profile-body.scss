@@ -372,6 +372,11 @@
   }
 
   .profile-body__table {
+    &-leader {
+      width: auto;
+      text-align: left;
+    }
+
     &-purpose {
       text-align: left;
     }
