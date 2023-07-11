@@ -7,6 +7,8 @@
 }
 
 @mixin search-reset {
+  appearance: none;
+
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
   &::-webkit-search-results-button,
